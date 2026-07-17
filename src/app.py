@@ -67,8 +67,7 @@ def load_ai_components():
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     vector_store = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)
-    
+    llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
     # 3. Prompt & Chain
     system_prompt = (
         "You are Matthew Lorensen's professional portfolio assistant. "
