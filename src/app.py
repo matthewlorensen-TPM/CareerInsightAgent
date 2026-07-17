@@ -32,7 +32,17 @@ def get_base64_of_bin_file(bin_file):
 img_base64 = get_base64_of_bin_file('src/Screenshot 2026-07-17 070620.png')
 bg_css = f"""
 <style>
-    * {{ font-family: "Arial Nova Light", Arial, sans-serif !important; }}
+    /* Target standard text but avoid breaking icons by removing the * wildcard */
+    html, body, p, h1, h2, h3, h4, h5, h6, li, a, div {{ 
+        font-family: "Arial Nova Light", Arial, sans-serif !important; 
+    }}
+    
+    /* Explicitly protect Streamlit's material icons from being overwritten */
+    .stIcon, .material-symbols-rounded, .material-icons {{
+        font-family: "Material Symbols Rounded", "Material Icons" !important;
+    }}
+    
+    /* Your custom background and sidebar CSS (untouched) */
     .stApp {{
         background-image: url("data:image/png;base64,{img_base64}");
         background-size: cover; background-position: center;
