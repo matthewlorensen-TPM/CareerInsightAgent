@@ -2,6 +2,8 @@ import os
 import base64
 import streamlit as st
 from dotenv import load_dotenv
+
+# Use these exact imports - they are the most compatible with modern LangChain
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_chroma import Chroma
 from langchain.chains import create_retrieval_chain
