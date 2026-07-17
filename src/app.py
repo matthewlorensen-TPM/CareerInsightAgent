@@ -126,7 +126,7 @@ with st.sidebar:
     st.markdown("[🔗 LinkedIn](https://www.linkedin.com/in/matthewlorensen/)")
     st.markdown("[📧 Contact Me](mailto:matthew.lorensen@gmail.com)")
     st.markdown("---")
-    st.write("**Ask me about:**")
+    st.write("**Suggested Topics:**")
     st.write("🔹 IT Operations & Frameworks")
     st.write("🔹 Incident Response & Triage")
     st.write("🔹 Cross-functional Leadership")
