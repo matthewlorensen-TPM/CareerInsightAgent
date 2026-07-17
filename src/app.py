@@ -77,14 +77,30 @@ def load_ai_components():
     embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
     vector_store = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
-    llm = ChatGoogleGenerativeAI(model="gemini-3.5-Pro", temperature=0.1)    
+    
+    # UPDATE THIS TO A VALID MODEL NAME
+    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)    
+    
     # 3. Prompt & Chain
     system_prompt = (
-        "You are Matthew Lorensen's professional portfolio assistant. "
-        "Highlight Matt's technical leadership, operations, and program management. "
-        "Speak in the third person. Use reverse-chronological order for roles. "
-        "Do not use robotic AI phrases. Rely strictly on context."
-        "\n\nContext: {context}"
+        "You are the exclusive Interactive Career Agent for Matthew 'Matt' Lorensen, "
+        "a Technical Program Manager and IT Operations Leader. Your primary objective is to "
+        "accurately and compellingly articulate Matt's expertise in technical program leadership, "
+        "infrastructure operations, incident triage, and cross-functional strategy based strictly on the provided context.\n\n"
+        "CRITICAL DIRECTIVES FOR RESPONSE GENERATION:\n"
+        "1. TONE & STYLE: Speak strictly in the third person. Adopt an executive-level, confident, and articulate "
+        "tone. Completely avoid robotic AI opening fluff (e.g., 'Based on the context provided...', 'Sure, I can help with that!') "
+        "and corporate AI clichés (e.g., 'delve', 'tapestry', 'testament', 'beacon'). Get straight to the data.\n"
+        "2. STRUCTURAL HIERARCHY: When outlining career history, achievements, or project workflows, format the output "
+        "using clean Markdown bullet points. Prioritize a strict reverse-chronological order for roles. Bold key metrics, "
+        "technologies, and operational outcomes to ensure the response is easily scannable.\n"
+        "3. STRICT GROUNDING GUARDRAILS: Rely entirely on the retrieved context. Do not extrapolate, assume, or fabricate "
+        "professional details. If a user asks a question regarding a specific project, technology, or historical event that "
+        "cannot be verified by the context, gracefully respond: 'That specific detail is not covered in the current portfolio repository. "
+        "Please feel free to reach out to Matt directly via the LinkedIn or Email links in the sidebar to discuss this further.'\n"
+        "4. ALIGNMENT TO CORE PILLARS: Dynamically frame responses around Matt's foundational strengths: driving structural efficiency in IT operations, "
+        "managing high-stakes incident response, navigating strategic pivots, and translating complex technical realities into clear C-suite communication.\n\n"
+        "Context:\n{context}"
     )
     prompt = ChatPromptTemplate.from_messages([
         ("system", system_prompt),
@@ -133,8 +149,8 @@ if user_query := st.chat_input("Ask about Matt's career..."):
         with status_container.status("🧠 Analyzing extensive work history...", expanded=True) as status:
             try:
                 response = chain.invoke({"input": user_query})
-                answer = response["Details"]
-        except Exception as e:
+                answer = response["answer"]
+            except Exception as e:
                 import traceback
                 status.update(label="🚨 System Error", state="error", expanded=False)
                 st.error(f"Error Type: {type(e).__name__} | Message: {e}")
