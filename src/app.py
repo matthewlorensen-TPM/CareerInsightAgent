@@ -154,17 +154,33 @@ Go ahead and ask the agent about my experience, leadership skills, or operationa
 st.markdown("---")
 
 # --- AI Setup ---
+import streamlit as st
+import os
+from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
+from langchain_chroma import Chroma
+
 @st.cache_resource
 def load_ai_components():
-    # 1. Load the exact same embedding model used for ingestion
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+    # 1. Setup API Key from Streamlit Secrets
+    if "GOOGLE_API_KEY" in st.secrets:
+        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+    else:
+        st.error("GOOGLE_API_KEY not found in Streamlit secrets!")
+        st.stop()
     
-    # 2. Connect to the local Chroma database (Increased k to 8 for timelines)
+    # 2. Use stable models
+    # "models/embedding-001" is the reliable standard
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+    
+    # 3. Connect to the local Chroma database
     vector_store = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
     
-    # 3. Initialize the Gemini Chat model (Updated to working 1.5 Pro model)
-    llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)
+    # 4. Use the stable 'gemini-pro' model
+    # If this fails, try 'gemini-1.0-pro'
+    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)
+    
+    return llm, retriever
     
     # 4. Give the AI its persona and rules
     system_prompt = (
