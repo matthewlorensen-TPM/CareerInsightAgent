@@ -20,6 +20,15 @@ st.set_page_config(
 
 load_dotenv()
 
+# --- Security Gate ---
+st.sidebar.subheader("🔒 Security Area")
+user_pwd = st.sidebar.text_input("Enter Passcode", type="password")
+
+if user_pwd != st.secrets.get("APP_PASSCODE", ""):
+    st.sidebar.warning("Please enter the passcode to unlock.")
+    st.warning("🔒 **Portfolio Locked:** Please enter the passcode in the sidebar to access the Interactive Career Agent.")
+    st.stop()
+
 # --- CSS / Styling ---
 def get_base64_of_bin_file(bin_file):
     try:
@@ -78,7 +87,7 @@ def load_ai_components():
     vector_store = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
     
-    # UPDATE THIS TO A VALID MODEL NAME
+    # Current Stable Model
     llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
     
     # 3. Prompt & Chain
@@ -120,24 +129,38 @@ with st.sidebar:
     st.markdown("[🔗 LinkedIn](https://www.linkedin.com/in/matthewlorensen/)")
     st.markdown("[📧 Contact Me](mailto:matthew.lorensen@gmail.com)")
     st.markdown("---")
-    st.write("**Ask me about:**")
-    st.write("🔹 IT Operations & Frameworks")
+    st.write("**Suggested Topics:**")
+    st.write("🔹 IT Operations & Frameworks")   
+    st.write("🔹 Culture Fit & Outside Interests")
     st.write("🔹 Incident Response & Triage")
     st.write("🔹 Cross-functional Leadership")
     st.write("🔹 Strategic Pivots & C-Suite Comm")
     st.write("🔹 Behavioral Q&A & Problem Solving")
-    st.write("🔹 Culture Fit & Outside Interests")
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
 st.subheader("Interactive Career Insight Agent")
+
+# Project Overview Expander
+with st.expander("💡 About This Project"):
+    st.write(
+        "As a Technical Program Manager and IT Operations Leader, I built this AI agent to move beyond a static resume. "
+        "This project demonstrates hands-on applied AI, offering a dynamic way to explore my professional background, "
+        "incident response methodologies, and cross-functional leadership experience."
+    )
+    st.write("**Built with:** Python, Streamlit, LangChain, Chroma DB, and the Google Gemini API.")
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-for message in st.session_state.messages:
+# Display previous messages and append feedback widgets to AI responses
+for idx, message in enumerate(st.session_state.messages):
     avatar = "👤" if message["role"] == "user" else "💼"
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
+        if message["role"] == "assistant":
+            feedback_key = f"feedback_{idx}"
+            st.feedback("thumbs", key=feedback_key)
 
 if user_query := st.chat_input("Ask me about Matt's career..."):
     st.session_state.messages.append({"role": "user", "content": user_query})
@@ -160,5 +183,5 @@ if user_query := st.chat_input("Ask me about Matt's career..."):
         
         if answer:
             status_container.empty()
-            st.markdown(answer)
             st.session_state.messages.append({"role": "assistant", "content": answer})
+            st.rerun() # Reruns the app to render the response and the feedback widget cleanly
