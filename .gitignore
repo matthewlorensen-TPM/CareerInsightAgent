@@ -1,0 +1,16 @@
+# Sensitive Information
+.env
+
+# Python Caches
+__pycache__/
+*.pyc
+
+# Local Databases
+chroma_db/
+
+# Virtual Environments
+venv/
+.venv/
+
+# System Files
+.DS_Store
