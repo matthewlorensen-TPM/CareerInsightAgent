@@ -77,7 +77,7 @@ def load_ai_components():
     embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
     vector_store = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
-    llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
+    llm = ChatGoogleGenerativeAI(model="gemini-3.5-Pro", temperature=0.1)    
     # 3. Prompt & Chain
     system_prompt = (
         "You are Matthew Lorensen's professional portfolio assistant. "
@@ -134,9 +134,12 @@ if user_query := st.chat_input("Ask about Matt's career..."):
             try:
                 response = chain.invoke({"input": user_query})
                 answer = response["Details"]
-            except Exception as e:
+        except Exception as e:
+                import traceback
                 status.update(label="🚨 System Error", state="error", expanded=False)
-                st.error(f"Something went wrong: {e}")
+                st.error(f"Error Type: {type(e).__name__} | Message: {e}")
+                with st.expander("Click to view full developer logs"):
+                    st.code(traceback.format_exc())
                 answer = None
         
         if answer:
