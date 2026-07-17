@@ -1,4 +1,4 @@
-# Professional Experience: Hansen Technologies
+# Company: Hansen Technologies
 **Tenure:** December 2021 – June 2026  
 **Location:** Denver, CO (Remote)  
 

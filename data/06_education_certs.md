@@ -12,7 +12,7 @@
 **Degree:** Associate of Applied Science (AAS)  
 **Major Concentration:** Computer Information Systems (CIS) – Programming Focus  
 **Graduation Date:** December 2018  
-**Core Focus Areas:** Software Development Methodologies, Common Programming Languages, Data Structures, and Computer Information Management Architectures.
+**Core Focus Areas:** Software Development Methodologies, Object-Oriented Programming (C++, C#), Database Design and Development (SQL), UNIX/Linux Operating Systems, Data Structures, Network Fundamentals, and Computer Information Management Architectures.
 
-## Additional Academic Background
+## Metropolitan State University
 **Focus Matrix:** Business Intelligence / Analytical Systems (Completed extensive specialized higher education coursework toward a Bachelor's degree; program progression paused following global pandemic disruptions).
