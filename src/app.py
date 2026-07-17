@@ -79,7 +79,7 @@ def load_ai_components():
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
     
     # UPDATE THIS TO A VALID MODEL NAME
-    llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)    
+    llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
     
     # 3. Prompt & Chain
     system_prompt = (
