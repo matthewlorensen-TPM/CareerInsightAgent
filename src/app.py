@@ -74,7 +74,7 @@ def load_ai_components():
         st.stop()
     
     # 2. Components
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+    embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
     vector_store = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
     llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
