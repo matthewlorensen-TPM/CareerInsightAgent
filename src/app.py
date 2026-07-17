@@ -20,13 +20,10 @@ st.set_page_config(
 
 load_dotenv()
 
-# --- Security Gate ---
-st.sidebar.subheader("🔒 Security Area")
-user_pwd = st.sidebar.text_input("Enter Passcode", type="password")
-
-if user_pwd != st.secrets.get("APP_PASSCODE", ""):
-    st.sidebar.warning("Please enter the passcode to unlock.")
-    st.warning("🔒 **Portfolio Locked:** Please enter the passcode in the sidebar to access the Interactive Career Agent.")
+# --- Security Gate (Hidden URL Parameter) ---
+# Checks the URL for a specific token (e.g., your-app.streamlit.app/?token=hire_me_2026)
+if st.query_params.get("token") != st.secrets.get("APP_PASSCODE", ""):
+    st.warning("🔒 **Portfolio Locked:** This interactive agent is currently available by invitation only.")
     st.stop()
 
 # --- CSS / Styling ---
@@ -129,13 +126,13 @@ with st.sidebar:
     st.markdown("[🔗 LinkedIn](https://www.linkedin.com/in/matthewlorensen/)")
     st.markdown("[📧 Contact Me](mailto:matthew.lorensen@gmail.com)")
     st.markdown("---")
-    st.write("**Suggested Topics:**")
-    st.write("🔹 IT Operations & Frameworks")   
-    st.write("🔹 Culture Fit & Outside Interests")
+    st.write("**Ask me about:**")
+    st.write("🔹 IT Operations & Frameworks")
     st.write("🔹 Incident Response & Triage")
     st.write("🔹 Cross-functional Leadership")
     st.write("🔹 Strategic Pivots & C-Suite Comm")
     st.write("🔹 Behavioral Q&A & Problem Solving")
+    st.write("🔹 Culture Fit & Outside Interests")
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
