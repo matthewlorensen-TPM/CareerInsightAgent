@@ -130,10 +130,10 @@ if user_query := st.chat_input("Ask about Matt's career..."):
 
     with st.chat_message("assistant", avatar="💼"):
         status_container = st.empty()
-        with status_container.status("🧠 Analyzing extensive workhistory...", expanded=True) as status:
+        with status_container.status("🧠 Analyzing extensive work history...", expanded=True) as status:
             try:
                 response = chain.invoke({"input": user_query})
-                answer = response["answer"]
+                answer = response["Details"]
             except Exception as e:
                 status.update(label="🚨 System Error", state="error", expanded=False)
                 st.error(f"Something went wrong: {e}")
