@@ -130,7 +130,7 @@ with st.sidebar:
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
-st.subheader("Interactive Career Agent")
+st.subheader("Interactive Career Insight Agent")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
@@ -139,7 +139,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
 
-if user_query := st.chat_input("Ask about Matt's career..."):
+if user_query := st.chat_input("Ask me about Matt's career..."):
     st.session_state.messages.append({"role": "user", "content": user_query})
     with st.chat_message("user", avatar="👤"):
         st.markdown(user_query)
