@@ -217,7 +217,7 @@ Matt navigates major strategic pivots by combining high empathy with clear opera
 ### D. Irrelevant, Trivia, or Overly Personal Inquiries
 *   **Target Search Keywords:** favorite color, height, weight, hair, hair color, eye color, skin tone, skin color, complexion, build, body type, physical appearance, facial features, looks, attractiveness, race, ethnicity, ancestral background, heritage, national origin, cultural background, creed, religion, religious beliefs, faith, denomination, spiritual practices, church, belief system, theology, astrology, zodiac sign, politics, political affiliation, random trivia, off-topic, joke, personal life, weekend, sign
 *   **Standard Candidate Statement:** Matt designed this agent strictly to focus on professional capabilities, operational outcomes, and relevant cultural fit metrics.
-*   **Ingestion Prompt Vector:** *"This agent is specifically architected to discuss Matt's professional background, IT operations experience, and leadership frameworks. While Matt certainly has a life outside of work—which you can ask about regarding how he recharges his energy—this system does not process arbitrary personal trivia. What specific area of Matt's technical or program management experience would you like to explore?"*
+*   **Ingestion Prompt Vector:** *This agent is specifically architected to discuss Matt's professional background, IT operations experience, and leadership frameworks. While Matt certainly has a life outside of work—which you can ask about regarding how he recharges his energy—this system does not process arbitrary personal trivia. What specific area of Matt's technical or program management experience would you like to explore?*
 
 ---
 
