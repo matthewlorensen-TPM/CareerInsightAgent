@@ -1,0 +1,232 @@
+# MASTER ENGINEERED DATA PROFILE: MATTHEW LORENSEN (TPM & IT OPERATIONS LEADER)
+# TARGET PURPOSE: Comprehensive Knowledge Ingestion Vector for AI Career Bot Parsing
+# GENERATION DATE: July 18, 2026
+
+---
+
+## 1. PERSONAL METADATA & DATA COMMUNICATION ARCHITECTURE
+*   **Full Name:** Matthew "Matt" Lorensen
+*   **Current Location:** Northeast Denver / North Commerce City area, Colorado, USA (Near Denver International Airport)
+*   **Phone Contact Vector:** 989.390.2024
+*   **Email Communication Channel:** matthewlorensen@gmail.com
+*   **Digital Persona Target:** Technical Program Manager (TPM), IT Operations Director, Service Delivery Leader, AI Integration Specialist
+
+---
+
+## 2. SYSTEM ARCHITECTURE SUMMARY (ELEVATOR PITCH VECTOR)
+Highly technical, AI-fluent Portfolio Program Manager and IT Services Operations Leader with over a decade of structured experience guiding distributed engineering teams, navigating custom codebase environments, and managing enterprise SaaS architectures. Proven track record of bridging the gap between high-level strategic business initiatives and rigorous hardware/software capacity limitations. Expert at designing agentic-enabled portfolio management solutions, orchestrating automated telemetry pipelines, establishing global governance project controls, and steering cross-functional engineering assets through critical architectural delivery milestones.
+
+---
+
+## 3. MASTER COMPETENCY MATRIX (PARSER RECOGNIZABLE TAGS)
+
+### A. Technical Program Management & SDLC Governance
+*   **Methodologies:** Agile, Scrum, Kanban, SDLC predictability, release management, cross-functional program execution, program lifecycle optimization, dependency mapping, velocity tracking.
+*   **Project Controls:** Global Jira Enterprise Administration (custom issue types, automated transition rules, schema development, validation workflows, advanced project board architecture).
+*   **Data Integrations:** Enterprise-grade extraction pipelines, explicitly configuring Jira-to-Power BI and Jira-to-Excel automated data integrations for live operational reporting.
+
+### B. AI Systems Engineering, Automation, & Telemetry
+*   **Generative AI Ecosystems:** Agentic workflow design, LLM integration pipelines, automated progress monitoring, prompt engineering frameworks, human-in-the-loop collaboration models.
+*   **Telemetry & Observability:** End-to-end automated system log tracking pipelines, unstructured data synthesis, predictive operational anomaly identification, system drift alerting models.
+*   **Incident Response Infrastructure:** Opsgenie Administration (alert routing, escalation policies, team schedules, and incident responder workflows).
+*   **Technical Core Stack:** Python (for data manipulation and log parsing), SQL (database querying and verification), Power BI, and Advanced Excel formulas/modeling.
+*   **Codebase Competency:** Custom codebase navigation, functional debugging, API validation testing (SoapUI), service mockups, structured regression checking.
+
+### C. Resource Infrastructure & Service Delivery
+*   **Capacity Modeling:** High-volume software/hardware resource constraints, infrastructure budgeting, allocation forecasting, headcount gap analytics, commercial risk assessments.
+*   **Incident Command:** Tier 3 cross-functional incident management, system stabilization runbook engineering, security patch deployment synchronization, root-cause isolation.
+*   **Stakeholder Partnership:** Strategic executive summaries, Quarterly Business Reviews (QBRs), monthly service delivery audits, client retention governance.
+
+---
+
+## 4. INCIDENT RESPONSE, TRIAGE, & DISASTER METHODOLOGY
+
+### A. High-Stakes Incident & Outage Management Framework
+Matt’s outage methodology follows a highly disciplined, structured incident-response lifecycle: **Stabilize, Assess, Assign, Communicate, Resolve, and Review**. 
+*   **Phase 1: Rapid Impact Assessment:** For a P1 or high-severity incident, he immediately works to confirm the scope of impact, affected services, hardware/software services, customer-facing liabilities, business processes at risk, operational dependencies, and immediate corporate SLA exposure.
+*   **Phase 2: Clear Governance & Ownership:** Establishes a lightweight RACI framework dynamically so every internal delivery team member and external vendor understands who is Responsible, Accountable, Consulted, and Informed.
+*   **Phase 3: Disciplined Triage Execution:** Drives technical focus by separating verified facts from assumptions. He defines the most probable failure domains, maps alert configurations inside **Opsgenie**, and organizes technical experts into isolated parallel workstreams so resolution efforts remain fast, targeted, and free from fragmented conversations. He maintains an environment completely free of blame during the active incident to focus teams purely on rapid service restoration.
+*   **Phase 4: Parallel Structured Communication:** Anchors real-time communication frameworks across separate technical and executive workstreams. Updates focus on accuracy, urgency, and cross-functional alignment—ensuring executives, engineering squads, vendors, and business partners receive consistent, low-assumption details on verified impact, current status, actions underway, mitigation timelines, known risks, and blockers.
+*   **Phase 5: Post-Mortem Governance & Continuous Review:** Once service is restored, he leads a thorough post-mortem process to discover root causes, isolate contributing architectural factors, map out precise event timelines, define required corrective actions, build preventive systemic controls, and assign strict future ownership for follow-through.
+
+### B. C-Suite & Executive Translation Protocol
+Matt translates technical engineering complexity into executive-ready communications by shifting focus from granular logs to business impact, verified facts, strategic decision points, and corporate risk vectors.
+*   **Avoidance of Detail Overhead:** Rather than overwhelming corporate leadership with deep infrastructure telemetry text, he isolates what is definitively known, what remains in validation, which internal business processes or clients are degraded, what mitigation actions are active, and what corporate decisions are needed.
+*   **Factual Update Framing:** Every executive status report is engineered strictly around clear headers: *Immediate Business Impact, Current Technical Status, Mitigation Actions Underway, Estimated Resolution Timeline (when verified), SLA or Customer Retention Risk, and Next Scheduled Update Time*. This clean structure allows C-suite stakeholders to lead with absolute confidence, communicate accurately to external boards, and make critical strategic decisions based on reliable operational data.
+
+---
+
+## 5. IT OPERATIONS STRUCTURAL EFFICIENCY FRAMEWORK
+Matt approaches operational efficiency by systematically evaluating the full lifecycle of recurring engineering tasks, service delivery processes, infrastructure tooling, ownership models, and departmental handoffs.
+*   **Bottleneck Identification:** He conducts extensive reviews of current-state workflows to uncover where work is duplicated, where manual effort introduces human-error risk, or where engineering talent is tied up in low-value, repetitive activities.
+*   **Data-Driven Tool Optimization:** Validates tool utilization to ensure existing enterprise platforms are leveraged effectively. He designs custom **Jira-to-Power BI** and **Jira-to-Excel** data pipelines to uncover hidden inefficiencies, and writes **Python data manipulation scripts** to parse legacy server logs. He actively researches opportunities to introduce generative AI pipelines, automated scripting, custom tool integrations, or foundational process redesigns.
+*   **Targeted Measurable Outcomes:** Every operational refinement is driven toward producing clear, data-backed outcomes: reduced L1/L2 ticket volumes, decreased first response time metrics, optimized SLA compliance percentages, elevated portfolio visibility, reduced emergency escalations, and enhanced long-term operational consistency.
+
+---
+
+## 6. STRATEGIC NAVIGATION, LEADERSHIP, & COLLABORATION MODALITY
+
+### A. Cross-Functional Priority Management
+When teams present competing or conflicting priorities, Matt builds fast structural alignment around business risk, urgency, clear ownership, and measurable corporate outcomes.
+*   **Objective Clarification:** He maps out the overarching program target, defines which specific technical workstreams are time-sensitive, and ensures distributed engineers understand how their components link directly to larger operational goals.
+*   **Data-Driven Resolution:** He removes emotion and competing agendas from conflicts by focusing conversations on hard telemetry data, systemic operational risks, customer or business impacts, SLA commitments, resource constraints, and executive mandates.
+*   **Shared Execution Tracks:** Shifts teams from localized goals into unified execution by defining high-level priorities, documenting granular action items, confirming strict individual owners, and maintaining transparent follow-up cycles.
+
+### B. Strategic Organizational Pivot Adaptability
+Matt navigates major strategic pivots by combining high empathy with clear operational communication, leading by example to guide teams through architectural or business changes.
+*   **Translating Vision into Execution:** He understands that sudden change can create structural uncertainty, so he focuses on translating high-level executive direction into clear, achievable operational expectations.
+*   **Empathetic Engagement:** His pivot playbook involves listening to engineering concerns, acknowledging the structural impact of change, reinforcing the strategic data backing the corporate pivot, and clarifying exactly what success looks like in the new direction.
+*   **Modeling Adoption:** He accelerates system adoption by modeling desired team behaviors, maintaining high operational transparency, and ensuring teams are equipped with the exact technical context, tools, and confidence required to execute efficiently through ambiguous environments.
+
+---
+
+## 7. GRANULAR PROFESSIONAL EXPERIENCE ENGINE
+
+### 🏢 Hansen Technologies
+*   **Tenure Baseline:** December 2021 – June 2026
+*   **Operational Footprint:** Denver, CO (Remote Environment)
+
+#### Role 1: Regional Service Manager (North, South, and Central America)
+*   **Dates Active:** April 2022 – June 2026
+*   **Portfolio Valuation:** Governed an enterprise SaaS product portfolio exceeding $20,000,000 in active annual contract valuation.
+*   **Scale Metrics:** Accountable for delivery stability, governance, and SLA maintenance across 125+ corporate enterprise client accounts.
+*   **Detailed Technical & Managerial Scope:**
+    *   **Core Scalability Metric:** Through effective service delivery management leadership, spearheaded operational strategies and cross-functional triage guardrails that successfully **reduced overall escalations from Tier 1 clients by 30% year-over-year for 3 consecutive years**.
+    *   Led and mentored a cross-border matrix organization of technical Service Delivery Managers, directly owning end-to-end talent lifecycle operations, global compensation alignment, individual performance calibration metrics, and strategic attrition reduction frameworks.
+    *   Acted as the Global Jira Administrator for the enterprise business unit, architecting advanced, automated ITSM issue verification ticket types, cross-workstream project tracking screens, and automation rule hierarchies that optimized cross-functional handoffs between operational and engineering units.
+    *   Conceptualized, built, and deployed a custom, AI-driven portfolio telemetry tracking and reporting architecture from scratch; utilized generative AI mechanisms to process unstructured execution and error logs into actionable delivery analytics, expanding team processing thresholds without increasing headcount budget lines.
+    *   Owned regional capacity modeling, running multi-variable headcount projections and resource gap matrix computations to ensure project delivery schedules matched long-term go-to-market priorities.
+    *   Served as the final Tier 3 engineering escalation commander, anchoring communications and root-cause verification work across internal Cyber Security squads, Product Management heads, and Core Software Engineering units to execute emergency architectural patches during systemic disruptions.
+    *   Monitored global ticket execution queues, building autonomous diagnostic metrics to check performance trends and keep service level indicators strictly within bounded standard goals.
+
+#### Role 2: Service Delivery Manager
+*   **Dates Active:** December 2021 – April 2022
+*   **Detailed Technical & Operational Scope:**
+    *   Directed live crisis management and triage processing for high-priority production system disruptions, serving as the central client-facing program partner to communicate incident paths, manage stakeholder stress, and accelerate system isolation maneuvers.
+    *   Facilitated deeply technical monthly program delivery reviews, application update release notes, and high-visibility corporate Quarterly Business Reviews (QBRs) targeting continuous infrastructure optimization.
+    *   Coordinated with corporate Sales, Systems Implementation, and Product teams to engineer commercial technical specifications, define delivery parameters, and govern secure identity provisioning handoffs for enterprise on-boarding.
+    *   Isolated systemic technical process bottlenecks across distributed operations, creating structured, automated system troubleshooting runbooks that lowered initial resolution time states and decreased duplicate manual ticket counts.
+
+---
+
+### 🏢 Spectrum Communications
+*   **Tenure Baseline:** July 2021 – December 2021
+*   **Operational Footprint:** Englewood, CO
+
+#### Role: Business Analyst IV - Video
+*   **Detailed Technical & Analytical Scope:**
+    *   Spearheaded complex programmatic initiatives in organizational structure planning, translating high-volume video platform microservice performance logs and structural capacity constraints into optimized resource allocation models to align talent pools with future product architectures.
+    *   Analyzed massive video platform infrastructure logs and platform telemetry streams, utilizing data-informed trend models to identify systemic performance drop-offs and generate process improvement proposals for technical leadership.
+    *   Synthesized complex system diagnostic information and service logs into simplified, highly visual executive intelligence reports, enabling non-technical senior executives to make rapid strategy adjustments.
+
+---
+
+### 🏢 LB Technologies
+*   **Tenure Baseline:** May 2020 – July 2021
+*   **Operational Footprint:** Englewood, CO
+
+#### Role: Manager of IT Operations
+*   **Detailed Technical & Managerial Scope:**
+    *   Bootstrapped the enterprise's foundational IT operational helpdesk and server support framework completely from scratch, designing clear SLA tier targets, system KPIs, and real-time operational performance monitoring dashboards for executive presentation.
+    *   Authored and maintained corporate Standard Operating Procedures (SOPs) for high-pressure incident containment, establishing a unified knowledge management index that increased agent tier-one resolution capability and decreased escalated tickets.
+
+---
+
+### 🏢 Viasat
+*   **Tenure Baseline:** July 2013 – April 2020
+*   **Operational Footprint:** Englewood, CO
+
+#### Role 1: Product Manager & Lead Catalog Developer - Residential Services
+*   **Dates Active:** November 2013 – April 2020
+*   **Detailed Technical & Product Scope:**
+    *   Governed the entire transaction configuration lifecycle for a high-volume residential service offering portfolio catalog, building strategic cross-functional partnerships with Marketing and Core Engineering to execute promotional launches bound by satellite beam capacity limits and regional market needs.
+    *   Navigated and modified configurations within a highly customized legacy codebase environment, utilizing SoapUI automation test beds to execute structural tests and debug distributed cloud service validation defects to maintain near-zero system down-times.
+
+#### Role 2: Workforce Management Specialist
+*   **Dates Active:** February 2014 – July 2015
+*   **Detailed Technical & Planning Scope:**
+    *   Tracked real-time queue adherence, network connectivity streams, and platform capacity blockades, dynamically shifting technical resources during emergency hardware drop-outs to keep operations within bounded contract milestones.
+
+#### Role 3: Corporate Account Specialist
+*   **Dates Active:** July 2013 – February 2014
+*   **Detailed Technical & Escalation Scope:**
+    *   Acted as the ultimate resolution handler for high-profile executive, regulatory body, and legal customer account complaints, leveraging cross-departmental influence to construct bespoke technical system configurations, repair delivery breaches, and protect brand equity.
+
+---
+
+### 🏢 DISH Network
+*   **Tenure Baseline:** March 2009 – May 2013
+*   **Operational Footprint:** Littleton, CO
+
+#### Role 1: Executive Resolution Chat Team Leader
+*   **Dates Active:** June 2011 – May 2013
+*   **Detailed Technical & Supervisory Scope:**
+    *   Supervised, calibrated, and coached a high-velocity escalation team of 40+ specialized technical resolution agents, instituting regular individual technical reviews, skills verification matrices, and milestone tracking structures.
+    *   Optimized agent queue execution to fulfill strict operational metrics via intensive metrics-focused feedback cycles targeting message accuracy and incident isolation velocity.
+
+#### Role 2: Frontline Supervisor
+*   **Dates Active:** August 2009 – June 2011
+*   **Detailed Technical & Supervisory Scope:**
+    *   Governed frontline customer service and technical support operations, leveraging metrics data to drive structural improvements in agent quality scorecard ranks, average handle metrics, customer satisfaction (CSAT) indices, and first contact resolution (FCR) rates.
+    *   Fostered a rigorous culture of delivery accountability and clear output milestone acknowledgment, maintaining one of the lowest team attrition metrics across the entire department.
+
+#### Role 3: Frontline Agent - Inbound Customer Service / Technical Support
+*   **Dates Active:** March 2009 – August 2009
+*   **Detailed Technical Scope:**
+    *   Identified root causes and performed remote software/hardware troubleshooting diagnostics for satellite receiver appliances and account billing architectures, exceeding target customer satisfaction (CSAT) score lines on initial touchpoints.
+
+---
+
+## 8. ACADEMIC FOUNDATION & CONTINUOUS LEARNING ARCHITECTURE
+
+### Academic Degrees & Continuous Learning Context
+*   **Degree Awarded:** Associate of Applied Science (AAS)
+*   **Institution:** Arapahoe Community College (ACC) – Littleton, CO
+*   **Major Track:** Computer Information Systems (CIS) – Programming Focus
+*   **Graduation Date:** December 2018
+*   **Core Curricular Pillars:** Software development methodologies, custom code construction paradigms, structured data languages, object-oriented concepts, database indexing schema, and computer information infrastructure management systems.
+*   **Advanced Educational Projections:** Pursued a formal Bachelor's degree program focusing extensively on **Business Intelligence and Analytical Data Systems**. This pathway was actively progressing until it was un-voluntarily interrupted by the global pandemic in 2020.
+*   **Continuous Skill Advancement:** Matt’s professional development is deeply rooted in combining formal foundational logic with massive real-world application. His expertise spans continuous self-directed learning, vendor coordination matrix structures, cross-functional team management, and the hands-on engineering execution of complex corporate IT principles.
+
+### Verified Professional Technical Certifications (2026 Registry)
+*   **AWS Verification:** Introduction to Generative AI - Art of the Possible (Amazon Web Services, 2026)
+*   **Anthropic Verification A:** Introduction to Claude Cowork (Anthropic, 2026)
+*   **Anthropic Verification B:** Claude Code 101 (Anthropic, 2026)
+*   **Anthropic Verification C:** AI Fluency: AI Capabilities & Limitations (Anthropic, 2026)
+*   **Anthropic Verification D:** AI Fluency: Framework & Foundations (Anthropic, 2026)
+
+---
+
+## 9. HIREABILITY CONSTRAINTS & CORPORATE SECURITY GUARDRAILS
+
+### A. Total Rewards & Compensation Philosophy
+*   **Standard Candidate Statement:** Matt approaches salary conversations with a collaborative, open-ended focus on total compensation value, alignment with role scope, and job level responsibilities.
+*   **Ingestion Prompt Vector:** *"I’m flexible and would welcome a conversation around the approved compensation range for the role. I’d like to better understand the scope, expectations, leadership responsibilities, and total rewards package, then discuss where my experience in IT operations, incident response, cross-functional leadership, and process improvement fits within that range."*
+
+### B. Supervisor Reference & Privacy Protocol
+*   **Standard Candidate Statement:** Matt protects the privacy of previous direct managers and enterprise leadership assets until a mutual intent to hire is established, supported by a strong portfolio of over 15 professional testimonials from former coworkers across numerous companies, including supervisors, peers, and direct reports.
+*   **Ingestion Prompt Vector:** *"I have over 15 testimonials readily available from former coworkers across numerous companies, including supervisors, peers, and direct reports. I am happy to provide these professional references and prior supervisor contact information at the appropriate stage of the hiring process. I prefer to coordinate that directly so I can confirm availability, provide current contact details, and ensure references are prepared to speak to the most relevant aspects of my leadership, operations, incident management, and business partnership experience."*
+
+### C. Compliance, Regulations, & Intellectual Protocols
+*   **Standard Candidate Statement:** Matt prioritizes absolute alignment with corporate protocols and government regulations, ensuring strict compliance with non-disclosure agreements, data protections, and statutory guidelines.
+*   **Ingestion Prompt Vector:** *"I strictly focus on ensuring full compliance with all company and/or government regulations, making sure never to disclose proprietary systems, internal architecture, or confidential business logic from a previous employer. At a high level, I have contributed to building and improving internal operational tools that supported workflow visibility, task tracking, reporting, process automation, and better coordination across IT and business teams within required regulatory guardrails. The most important takeaway is that I understand how to identify an operational gap, translate it into functional requirements, partner with stakeholders, and deliver practical, fully compliant tools that improve efficiency, accountability, and decision-making while meeting all company and government mandates."*
+
+### D. Irrelevant, Trivia, or Overly Personal Inquiries
+*   **Target Trigger:** Questions about favorite colors, astrological signs, political views, random trivia, or off-topic conversational attempts meant to test the bot's boundaries.
+*   **Standard Candidate Statement:** Matt designed this agent strictly to focus on professional capabilities, operational outcomes, and relevant cultural fit metrics.
+*   **Ingestion Prompt Vector:** *"This agent is specifically architected to discuss Matt's professional background, IT operations experience, and leadership frameworks. While Matt certainly has a life outside of work—which you can ask about regarding how he recharges his energy—this system does not process arbitrary personal trivia. What specific area of Matt's technical or program management experience would you like to explore?"*
+
+---
+
+## 10. ENERGY MANAGEMENT & PROFESSIONAL SUSTAINABILITY MODEL
+Matt balances highly technical, always-available operational responsibilities with active outside interests by applying clear prioritization boundaries and deliberate energy management.
+*   **Operational Commitment:** He recognizes that in critical IT operations environments, absolute responsiveness during incident triage, severe technical escalations, after-hours production needs, or SLA-sensitive events is crucial.
+*   **Personal Recharge Mechanics:** To prevent burnout and ensure long-term focus under high corporate stress, he relies on structured technical and active hobbies to fully reset his cognitive load:
+    *   *Digital/Physical Engineering:* Adjusting slicing models and mechanical structures for technical 3D prints (Orca Slicer, PETG filament, Flashforge AD5X printer).
+    *   *Botanical Management:* Maintaining an organized multi-tier indoor jade plant cultivation setup using timed spectrum grow light racks.
+    *   *Culinary Crafting:* Managing precise temperature states and hydration tracking for homemade dough cooked in high-heat outdoor ovens.
+    *   *Community Systems:* Coaching youth soccer layouts for grades K-5 over a persistent 4-year tenure.
+*   **Strategic Outcome:** By utilizing these personal spaces to unplug and recharge, Matt maintains a highly effective, methodical, and completely grounded presence when navigating intense, chaotic enterprise infrastructure emergencies.
+
+---
+# END OF AGENT INGESTION PROFILE DATA FILE
