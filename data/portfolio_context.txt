@@ -231,5 +231,31 @@ Matt balances highly technical, always-available operational responsibilities wi
     *   *Community Systems:* Coaching youth soccer layouts for grades K-5 over a persistent 4-year tenure[cite: 11].
 *   **Strategic Outcome:** By utilizing these personal spaces to unplug and recharge, Matt maintains a highly effective, methodical, and completely grounded presence when navigating intense, chaotic enterprise infrastructure emergencies.
 
+## 11. APPLIED AI & ENGINEERING: INTERACTIVE PORTFOLIO ARCHITECTURE
+
+### A. System Architecture & Tech Stack Summary
+Matt engineered, developed, and deployed this Interactive Career Insight Agent from the ground up as a practical demonstration of Applied Generative AI and Retrieval-Augmented Generation (RAG). The application serves as a dynamic alternative to a static resume, proving his ability to manage AI integrations, configure vector databases, and architect secure, scalable Python applications.
+*   **Core Application Framework:** Python 3.14, Streamlit (for rapid UI rendering and state management).
+*   **Orchestration Engine:** LangChain (utilizing `create_retrieval_chain` and `create_stuff_documents_chain` for document parsing and LLM integration).
+*   **Vector Database:** Local persistent ChromaDB (`langchain_chroma`), configured for semantic similarity search.
+*   **Language Models:** Google Gemini 3.5 Flash (for inference and response generation) and Gemini Embedding 001 (for vectorization).
+*   **Deployment Pipeline:** Hosted on Streamlit Community Cloud, linked directly to a GitHub repository for CI/CD version control.
+
+### B. RAG Configuration & Vector Search Tuning
+To ensure the LLM delivers highly accurate, context-aware responses without hallucinating professional experience, the retrieval pipeline is strictly governed:
+*   **Retrieval Parameters:** The ChromaDB retriever is optimized with `search_kwargs={"k": 8}`, ensuring the agent pulls a broad enough context window to synthesize complex, multi-role career questions.
+*   **Dense Keyword Injection:** To counteract the limitations of semantic search on short, one-word queries (e.g., "salary" or "references"), the ingestion vector utilizes dense keyword targeting, mapping high-frequency colloquial terms directly to strict corporate guardrails.
+*   **State Management:** Leverages Streamlit's `@st.cache_resource` to maintain persistent database connections across user sessions, reducing API latency and preventing memory leaks.
+
+### C. Security Guardrails & Prompt Engineering
+Matt designed the system's prompt architecture with enterprise-grade security and data governance in mind, implementing strict behavioral boundaries for the LLM:
+*   **Authentication Gate:** The application is secured via a URL query parameter token (`st.query_params`), restricting access strictly to invited hiring teams and preventing unauthorized API consumption.
+*   **Anti-Hallucination Directives:** The system prompt enforces a zero-extrapolation rule. If a query falls outside the vectorized context, the agent is hardcoded to fail gracefully and redirect the user to Matt's LinkedIn or email.
+*   **Priority Override Hierarchy:** A custom Rule #5 directive forces the LLM to bypass its standard summarization logic when specific, sensitive subjects are triggered (e.g., compliance, compensation, references), forcing it to output an exact, pre-approved "Standard Candidate Statement" verbatim.
+
+### D. Telemetry, UX, & CI/CD Integrations
+*   **Custom UI/UX:** The frontend utilizes base64-encoded binary image injection for background rendering and custom CSS to enforce strict typographic consistency while protecting native Streamlit component icons.
+*   **Asynchronous Logging (Architected for Sprint 2):** Built a scalable backend logging framework using the `gspread` library and Google Cloud Service Account credentials to capture user queries and AI responses in Google Sheets for post-deployment telemetry and prompt optimization.
+*   **Interactive Feedback Loop:** Integrated a session-state managed UI feedback widget (`st.feedback`), allowing users to rate AI responses and trigger immediate visual toast notifications.
 ---
 # END OF AGENT INGESTION PROFILE DATA FILE
