@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from langchain_core.documents import Document
+from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import MarkdownTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_chroma import Chroma
@@ -8,26 +8,23 @@ from langchain_chroma import Chroma
 load_dotenv()
 
 def build_vector_database():
-    print("Loading markdown files from the data folder...")
-    data_dir = "data"
+    file_path = "data/portfolio_context.txt"
+    print(f"Loading portfolio context from {file_path}...")
     
-    # 1. Read files and check if they are empty
-    documents = []
-    for filename in os.listdir(data_dir):
-        if filename.endswith(".md"):
-            filepath = os.path.join(data_dir, filename)
-            with open(filepath, "r", encoding="utf-8") as file:
-                text = file.read().strip()
-                if text:
-                    documents.append(Document(page_content=text, metadata={"source": filename}))
-                else:
-                    print(f"  -> WARNING: {filename} is completely empty!")
-    
-    if not documents:
-        print("\nERROR: No text found in your files. Please paste the text back into them and save.")
+    # Check if file actually exists
+    if not os.path.exists(file_path):
+        print(f"ERROR: Could not find {file_path}. Make sure the data folder and text file exist.")
         return
 
-    print(f"Loaded {len(documents)} files with text. Splitting text...")
+    # 1. Read the file
+    loader = TextLoader(file_path, encoding="utf-8")
+    documents = loader.load()
+    
+    if not documents or not documents[0].page_content.strip():
+        print(f"\nERROR: {file_path} is completely empty! Please paste the text back into it and save.")
+        return
+
+    print("Loaded file successfully. Splitting text...")
     
     # 2. Split text
     splitter = MarkdownTextSplitter(chunk_size=1000, chunk_overlap=200)
@@ -39,7 +36,7 @@ def build_vector_database():
 
     print(f"Created {len(chunks)} chunks. Testing Google API connection...")
     
-    # 3. Use the newly required gemini-embedding-001 model
+    # 3. Check Embeddings
     embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
     try:
         test_embed = embeddings.embed_query("Test connection")
@@ -56,7 +53,7 @@ def build_vector_database():
         persist_directory="./chroma_db"
     )
     
-    print("\nSuccess! Your career data has been vectorized and stored in ChromaDB.")
+    print("\n✅ Success! Your career data has been vectorized and stored in ChromaDB.")
 
 if __name__ == "__main__":
     build_vector_database()
