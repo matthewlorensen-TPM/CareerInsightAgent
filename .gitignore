@@ -5,9 +5,6 @@
 __pycache__/
 *.pyc
 
-# Local Databases
-chroma_db/
-
 # Virtual Environments
 venv/
 .venv/
