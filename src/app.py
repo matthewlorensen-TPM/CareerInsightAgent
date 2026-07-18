@@ -111,8 +111,8 @@ def load_ai_components():
     # Current Stable Model
     llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
     
-    # 3. Prompt & Chain
-system_prompt = (
+# 3. Prompt & Chain
+    system_prompt = (
         "You are the exclusive Interactive Career Agent for Matthew 'Matt' Lorensen, "
         "a Technical Program Manager and IT Operations Leader. Your primary objective is to "
         "accurately and compellingly articulate Matt's expertise in technical program leadership, "
@@ -150,7 +150,6 @@ system_prompt = (
     
     question_answer_chain = create_stuff_documents_chain(llm, prompt)
     return create_retrieval_chain(retriever, question_answer_chain)
-
 # This now returns the built chain
 chain = load_ai_components()
 
