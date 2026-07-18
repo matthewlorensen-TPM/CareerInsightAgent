@@ -1,7 +1,12 @@
 import os
 import base64
+from datetime import datetime
 import streamlit as st
 from dotenv import load_dotenv
+
+# --- New Google Sheets Imports ---
+import gspread
+from google.oauth2.service_account import Credentials
 
 # Use these exact, standard paths
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
@@ -68,6 +73,25 @@ bg_css = f"""
 </style>
 """
 st.markdown(bg_css, unsafe_allow_html=True)
+
+# --- Google Sheets Logger ---
+def log_interaction(query, answer):
+    try:
+        scopes = ['https://www.googleapis.com/auth/spreadsheets']
+        credentials = {
+            "client_email": st.secrets["GCP_SA_EMAIL"],
+            "private_key": st.secrets["GCP_SA_PRIVATE_KEY"].replace('\\n', '\n'),
+            "token_uri": "https://oauth2.googleapis.com/token",
+        }
+        creds = Credentials.from_service_account_info(credentials, scopes=scopes)
+        client = gspread.authorize(creds)
+        
+        # Matches your exact workbook name
+        sheet = client.open("CIA_Portfolio_Logger").sheet1
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        sheet.append_row([timestamp, query, answer])
+    except Exception as e:
+        print(f"Logging failed: {e}") # Fails silently in the background so the app doesn't crash for the user
 
 # --- AI Setup ---
 @st.cache_resource
@@ -181,4 +205,8 @@ if user_query := st.chat_input("Ask me about Matt's career..."):
         if answer:
             status_container.empty()
             st.session_state.messages.append({"role": "assistant", "content": answer})
+            
+            # --- Trigger the logging function in the background ---
+            log_interaction(user_query, answer)
+            
             st.rerun() # Reruns the app to render the response and the feedback widget cleanly
