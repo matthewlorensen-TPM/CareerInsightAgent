@@ -168,11 +168,26 @@ st.title("Matthew Lorensen")
 st.subheader("Interactive Career Insight Agent")
 
 # Project Overview Bubble
-st.info(
-    "As a Technical Program Manager and IT Operations Leader, I built this AI agent to move beyond a static resume. "
-    "This project demonstrates hands-on applied AI, offering a dynamic way to explore my professional background, "
-    "incident response methodologies, and cross-functional leadership experience.\n\n"
-    "**Built with:** Python, Streamlit, LangChain, Chroma DB, and the Google Gemini API."
+st.markdown(
+    """
+    <div style="background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); 
+                border-radius: 12px; padding: 15px 20px; margin-bottom: 20px; color: #ffffff; 
+                backdrop-filter: blur(8px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+        <div style="margin-bottom: 10px;"><b>About This Project</b></div>
+        <div style="margin-bottom: 10px; font-size: 0.95em; line-height: 1.5;">
+            As a Technical Program Manager and IT Operations Leader, I built this AI agent to move beyond a static resume. 
+            This project demonstrates hands-on applied AI, offering a dynamic way to explore my professional background, 
+            incident response methodologies, and cross-functional leadership experience.
+        </div>
+        <div style="margin-bottom: 10px; font-size: 0.95em; line-height: 1.5;">
+            <b>Note on Accuracy:</b> The model's temperature is strictly locked at 0.1. This guarantees that every response is intentional, highly deterministic, and completely grounded in my actual professional experience rather than AI hallucination.
+        </div>
+        <div style="font-size: 0.95em;">
+            <b>Built with:</b> Python, Streamlit, LangChain, Chroma DB, and the Google Gemini API.
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
 )
 
 if "messages" not in st.session_state:
