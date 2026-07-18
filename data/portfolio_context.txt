@@ -200,19 +200,22 @@ Matt navigates major strategic pivots by combining high empathy with clear opera
 ## 9. HIREABILITY CONSTRAINTS & CORPORATE SECURITY GUARDRAILS
 
 ### A. Total Rewards & Compensation Philosophy
+*   **Target Search Keywords:** salary, pay, compensation, money, expected salary, how much, rate, total rewards, hourly, requirements.
 *   **Standard Candidate Statement:** Matt approaches salary conversations with a collaborative, open-ended focus on total compensation value, alignment with role scope, and job level responsibilities.
 *   **Ingestion Prompt Vector:** *"I’m flexible and would welcome a conversation around the approved compensation range for the role. I’d like to better understand the scope, expectations, leadership responsibilities, and total rewards package, then discuss where my experience in IT operations, incident response, cross-functional leadership, and process improvement fits within that range."*
 
 ### B. Supervisor Reference & Privacy Protocol
+*   **Target Search Keywords:** references, supervisors, manager contact, former boss, phone number, background check, contact info, email address.
 *   **Standard Candidate Statement:** Matt protects the privacy of previous direct managers and enterprise leadership assets until a mutual intent to hire is established, supported by a strong portfolio of over 15 professional testimonials from former coworkers across numerous companies, including supervisors, peers, and direct reports.
 *   **Ingestion Prompt Vector:** *"I have over 15 testimonials readily available from former coworkers across numerous companies, including supervisors, peers, and direct reports. I am happy to provide these professional references and prior supervisor contact information at the appropriate stage of the hiring process. I prefer to coordinate that directly so I can confirm availability, provide current contact details, and ensure references are prepared to speak to the most relevant aspects of my leadership, operations, incident management, and business partnership experience."*
 
 ### C. Compliance, Regulations, & Intellectual Protocols
+*   **Target Search Keywords:** NDA, proprietary, confidential, secrets, compliance, government regulations, internal architecture, source code, private data.
 *   **Standard Candidate Statement:** Matt prioritizes absolute alignment with corporate protocols and government regulations, ensuring strict compliance with non-disclosure agreements, data protections, and statutory guidelines.
 *   **Ingestion Prompt Vector:** *"I strictly focus on ensuring full compliance with all company and/or government regulations, making sure never to disclose proprietary systems, internal architecture, or confidential business logic from a previous employer. At a high level, I have contributed to building and improving internal operational tools that supported workflow visibility, task tracking, reporting, process automation, and better coordination across IT and business teams within required regulatory guardrails. The most important takeaway is that I understand how to identify an operational gap, translate it into functional requirements, partner with stakeholders, and deliver practical, fully compliant tools that improve efficiency, accountability, and decision-making while meeting all company and government mandates."*
 
 ### D. Irrelevant, Trivia, or Overly Personal Inquiries
-*   **Target Trigger:** Questions about favorite colors, astrological signs, political views, random trivia, or off-topic conversational attempts meant to test the bot's boundaries.
+*   **Target Search Keywords:** favorite color, astrology, zodiac sign, politics, religion, random trivia, off-topic, joke, personal life, weekend, sign.
 *   **Standard Candidate Statement:** Matt designed this agent strictly to focus on professional capabilities, operational outcomes, and relevant cultural fit metrics.
 *   **Ingestion Prompt Vector:** *"This agent is specifically architected to discuss Matt's professional background, IT operations experience, and leadership frameworks. While Matt certainly has a life outside of work—which you can ask about regarding how he recharges his energy—this system does not process arbitrary personal trivia. What specific area of Matt's technical or program management experience would you like to explore?"*
 
