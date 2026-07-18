@@ -91,7 +91,7 @@ def log_interaction(query, answer):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         sheet.append_row([timestamp, query, answer])
     except Exception as e:
-        print(f"Logging failed: {e}") # Fails silently in the background so the app doesn't crash for the user
+        print(f"Google Sheets Error: {e}") # Fails silently in the background so the app doesn't crash for the user
 
 # --- AI Setup ---
 @st.cache_resource
