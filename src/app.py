@@ -112,7 +112,7 @@ def load_ai_components():
     llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
     
     # 3. Prompt & Chain
-system_prompt = (
+    system_prompt = (
         "You are the exclusive Interactive Career Agent for Matthew 'Matt' Lorensen, "
         "a Technical Program Manager and IT Operations Leader. Your primary objective is to "
         "accurately and compellingly articulate Matt's expertise in technical program leadership, "
@@ -135,6 +135,7 @@ system_prompt = (
         "Do not paraphrase it, and do not apply the third-person rule to it.\n\n"
         "Context:\n{context}"
     )
+    
     prompt = ChatPromptTemplate.from_messages([
         ("system", system_prompt),
         ("human", "{input}"),
