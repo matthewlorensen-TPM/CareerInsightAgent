@@ -167,14 +167,13 @@ with st.sidebar:
 st.title("Matthew Lorensen")
 st.subheader("Interactive Career Insight Agent")
 
-# Project Overview Expander
-with st.expander("💡 About This Project"):
-    st.write(
-        "As a Technical Program Manager and IT Operations Leader, I built this AI agent to move beyond a static resume. "
-        "This project demonstrates hands-on applied AI, offering a dynamic way to explore my professional background, "
-        "incident response methodologies, and cross-functional leadership experience."
-    )
-    st.write("**Built with:** Python, Streamlit, LangChain, Chroma DB, and the Google Gemini API.")
+# Project Overview Bubble
+st.info(
+    "As a Technical Program Manager and IT Operations Leader, I built this AI agent to move beyond a static resume. "
+    "This project demonstrates hands-on applied AI, offering a dynamic way to explore my professional background, "
+    "incident response methodologies, and cross-functional leadership experience.\n\n"
+    "**Built with:** Python, Streamlit, LangChain, Chroma DB, and the Google Gemini API."
+)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
