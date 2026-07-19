@@ -28,7 +28,7 @@ load_dotenv()
 
 # --- Security Gate (Hidden URL Parameter) ---
 if st.query_params.get("token") != st.secrets.get("APP_PASSCODE", ""):
-    st.warning("🔒 **Portfolio Locked:** This interactive agent is currently available by invitation only. Please contact the owner for access. matthewlorensen@gmail.com")
+    st.warning("🔒 **Portfolio Locked:** This interactive agent is currently available by invitation only.")
     st.stop()
 
 # --- CSS / Styling ---
@@ -45,7 +45,7 @@ main_bg_base64 = get_base64_of_bin_file('src/Screenshot 2026-07-17 070620.png')
 sidebar_bg_base64 = get_base64_of_bin_file('src/sidebar.jpg')
 github_icon_base64 = get_base64_of_bin_file('src/github.png')
 gmail_icon_base64 = get_base64_of_bin_file('src/gmail.png')
-linkedin_icon_base64 = get_base64_of_bin_file('src/image_96b463.png') 
+linkedin_icon_base64 = get_base64_of_bin_file('src/linkedin.png') 
 
 bg_css = f"""
 <style>
@@ -184,25 +184,20 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Custom HTML CTAs for LinkedIn, GitHub, and Gmail with Real Icons
-    cta_buttons_html = f"""
-    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-        <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s;">
-            <img src="data:image/png;base64,{linkedin_icon_base64}" width="20" style="margin-right: 10px;"> 
-            <span style="font-weight: 600;">Connect on LinkedIn</span>
-        </a>
-
-        <a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s;">
-            <img src="data:image/png;base64,{github_icon_base64}" width="20" style="margin-right: 10px; filter: invert(1);"> 
-            <span style="font-weight: 600;">View Source on GitHub</span>
-        </a>
-        
-        <a href="mailto:matthew.lorensen@gmail.com" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s;">
-            <img src="data:image/png;base64,{gmail_icon_base64}" width="20" style="margin-right: 10px;"> 
-            <span style="font-weight: 600;">Schedule a Conversation</span>
-        </a>
-    </div>
-    """
+    # Custom HTML CTAs: Built as a single continuous string to strictly prevent Streamlit Markdown interference.
+    cta_buttons_html = (
+        f'<div style="display: flex; flex-direction: row; justify-content: center; gap: 15px; margin-bottom: 20px;">'
+        f'<a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s; width: 50px; height: 50px;">'
+        f'<img src="data:image/png;base64,{linkedin_icon_base64}" width="28">'
+        f'</a>'
+        f'<a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s; width: 50px; height: 50px;">'
+        f'<img src="data:image/png;base64,{github_icon_base64}" width="28">'
+        f'</a>'
+        f'<a href="mailto:matthew.lorensen@gmail.com" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s; width: 50px; height: 50px;">'
+        f'<img src="data:image/png;base64,{gmail_icon_base64}" width="28">'
+        f'</a>'
+        f'</div>'
+    )
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
     st.markdown("---")
@@ -248,19 +243,6 @@ for idx, message in enumerate(st.session_state.messages):
         if message["role"] == "assistant":
             feedback_key = f"feedback_{idx}"
             st.feedback("thumbs", key=feedback_key)
-
-# --- Footer Disclaimer ---
-st.markdown(
-    """
-    <div style="text-align: center; font-size: 0.8em; color: #94a3b8; margin-top: 30px; margin-bottom: 20px;">
-        <b>Disclaimer:</b> This AI agent is designed to provide interactive insights into Matt's professional background. 
-        While strictly grounded in his actual resume and portfolio data, AI can occasionally make mistakes. 
-        For official verification of employment, technical skills, or references, please reach out to Matt directly. <br>
-        <em>Note: For quality and diagnostic purposes, interactions with this agent may be logged.</em>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
 if user_query := st.chat_input("Ask me about Matt's career..."):
     st.session_state.messages.append({"role": "user", "content": user_query})
