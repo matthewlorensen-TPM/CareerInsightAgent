@@ -184,25 +184,28 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Custom HTML CTAs: Built as a single continuous string to strictly prevent Streamlit Markdown interference.
+    # Custom HTML CTAs: Perfected flex alignment for icon images without internal padding conflicts.
     cta_buttons_html = (
         f'<div style="display: flex; flex-direction: row; justify-content: center; gap: 15px; margin-bottom: 20px;">'
-        f'<a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s; width: 50px; height: 50px;">'
-        f'<img src="data:image/png;base64,{linkedin_icon_base64}" width="28">'
+        f'<a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; text-decoration: none; width: 50px; height: 50px; box-sizing: border-box;">'
+        f'<img src="data:image/png;base64,{linkedin_icon_base64}" style="width: 24px; height: 24px; object-fit: contain; display: block; margin: 0; padding: 0;">'
         f'</a>'
-        f'<a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s; width: 50px; height: 50px;">'
-        f'<img src="data:image/png;base64,{github_icon_base64}" width="28">'
+        f'<a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; text-decoration: none; width: 50px; height: 50px; box-sizing: border-box;">'
+        f'<img src="data:image/png;base64,{github_icon_base64}" style="width: 24px; height: 24px; object-fit: contain; display: block; margin: 0; padding: 0;">'
         f'</a>'
-        f'<a href="mailto:matthew.lorensen@gmail.com" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); padding: 12px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s; width: 50px; height: 50px;">'
-        f'<img src="data:image/png;base64,{gmail_icon_base64}" width="28">'
+        f'<a href="mailto:matthew.lorensen@gmail.com" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; text-decoration: none; width: 50px; height: 50px; box-sizing: border-box;">'
+        f'<img src="data:image/png;base64,{gmail_icon_base64}" style="width: 24px; height: 24px; object-fit: contain; display: block; margin: 0; padding: 0;">'
         f'</a>'
         f'</div>'
     )
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
+    # Add vertical space to push the reset button lower
+    st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown("---")
     
-    if st.button("🔄 Reset Conversation"):
+    # Center the button by setting use_container_width=True
+    if st.button("🔄 Reset Conversation", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
 
