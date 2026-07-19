@@ -86,10 +86,34 @@ bg_css = f"""
         background-color: rgba(15, 23, 42, 0.7);
     }}
 
+    /* Custom Chat Message Styling */
     [data-testid="stChatMessage"] {{
         background-color: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 12px; padding: 15px 20px; margin-bottom: 15px;
         backdrop-filter: blur(8px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }}
+    
+    /* Custom Sidebar Social Buttons */
+    .social-icons-container {{
+        display: flex; flex-direction: row; justify-content: center; gap: 15px; margin-bottom: 20px;
+    }}
+    .social-btn {{
+        display: flex; align-items: center; justify-content: center;
+        background-color: rgba(255, 255, 255, 0.03); 
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        text-decoration: none;
+        width: 60px; height: 60px; /* 20% larger container */
+        transition: all 0.3s ease;
+    }}
+    .social-btn:hover {{
+        background-color: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+    }}
+    .social-btn img {{
+        width: 30px; height: 30px; /* 25% larger icon */
+        object-fit: contain;
     }}
 </style>
 """
@@ -184,20 +208,20 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Custom HTML CTAs: Perfected flex alignment for icon images without internal padding conflicts.
-    cta_buttons_html = (
-        f'<div style="display: flex; flex-direction: row; justify-content: center; gap: 15px; margin-bottom: 20px;">'
-        f'<a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; text-decoration: none; width: 50px; height: 50px; box-sizing: border-box;">'
-        f'<img src="data:image/png;base64,{linkedin_icon_base64}" style="width: 24px; height: 24px; object-fit: contain; display: block; margin: 0; padding: 0;">'
-        f'</a>'
-        f'<a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; text-decoration: none; width: 50px; height: 50px; box-sizing: border-box;">'
-        f'<img src="data:image/png;base64,{github_icon_base64}" style="width: 24px; height: 24px; object-fit: contain; display: block; margin: 0; padding: 0;">'
-        f'</a>'
-        f'<a href="mailto:matthew.lorensen@gmail.com" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; text-decoration: none; width: 50px; height: 50px; box-sizing: border-box;">'
-        f'<img src="data:image/png;base64,{gmail_icon_base64}" style="width: 24px; height: 24px; object-fit: contain; display: block; margin: 0; padding: 0;">'
-        f'</a>'
-        f'</div>'
-    )
+    # Custom HTML CTAs: Using cleanly separated CSS classes for flawless rendering.
+    cta_buttons_html = f"""
+    <div class="social-icons-container">
+        <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
+            <img src="data:image/png;base64,{linkedin_icon_base64}">
+        </a>
+        <a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" class="social-btn">
+            <img src="data:image/png;base64,{github_icon_base64}">
+        </a>
+        <a href="mailto:matthew.lorensen@gmail.com" target="_blank" class="social-btn">
+            <img src="data:image/png;base64,{gmail_icon_base64}">
+        </a>
+    </div>
+    """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
     # Add vertical space to push the reset button lower
