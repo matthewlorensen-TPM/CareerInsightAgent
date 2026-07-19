@@ -103,7 +103,7 @@ bg_css = f"""
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 14px;
         text-decoration: none;
-        width: 60px; height: 60px; /* 20% larger container */
+        width: 65px; height: 65px; /* Adjusted container */
         transition: all 0.3s ease;
     }}
     .social-btn:hover {{
@@ -112,7 +112,7 @@ bg_css = f"""
         transform: translateY(-2px);
     }}
     .social-btn img {{
-        width: 30px; height: 30px; /* 25% larger icon */
+        width: 35px; height: 35px; /* 15% larger icon */
         object-fit: contain;
     }}
 </style>
@@ -124,6 +124,7 @@ def log_interaction(query, answer):
     try:
         scopes = ['https://www.googleapis.com/auth/spreadsheets']
         credentials = {
+            "type": "service_account", # <-- This is the missing link!
             "client_email": st.secrets["GCP_SA_EMAIL"],
             "private_key": st.secrets["GCP_SA_PRIVATE_KEY"].replace('\\n', '\n'),
             "token_uri": "https://oauth2.googleapis.com/token",
@@ -135,7 +136,7 @@ def log_interaction(query, answer):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         sheet.append_row([timestamp, query, answer])
     except Exception as e:
-        st.error(f"Google Sheets Error: {e}") 
+        st.error(f"Google Sheets Error: {e}")
 
 # --- AI Setup ---
 @st.cache_resource
