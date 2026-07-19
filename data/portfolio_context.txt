@@ -231,14 +231,14 @@ Matt’s career is defined by high-impact operational transformations, zero-to-o
 
 ## 10. ENERGY MANAGEMENT & PROFESSIONAL SUSTAINABILITY MODEL
 Matt balances highly technical, always-available operational responsibilities with active outside interests by applying clear prioritization boundaries and deliberate energy management.
-*   **Operational Commitment:** He recognizes that in critical IT operations environments, absolute responsiveness during incident triage, severe technical escalations, after-hours production needs, or SLA-sensitive events is crucial.
-*   **Personal Recharge Mechanics:** To prevent burnout and ensure long-term focus under high corporate stress, he relies on structured technical and active hobbies to fully reset his cognitive load:
-    *   *Digital/Physical Engineering:* Adjusting slicing models and mechanical structures for technical 3D prints (Orca Slicer, PETG filament, Flashforge AD5X printer)[cite: 11].
-    *   *Botanical Management:* Maintaining an organized multi-tier indoor jade plant cultivation setup using timed spectrum grow light racks[cite: 11].
-    *   *Culinary Crafting:* Managing precise temperature states and hydration tracking for homemade dough cooked in high-heat outdoor ovens[cite: 11].
-    *   *Community Systems:* Coaching youth soccer layouts for grades K-5 over a persistent 4-year tenure[cite: 11].
-*   **Strategic Outcome:** By utilizing these personal spaces to unplug and recharge, Matt maintains a highly effective, methodical, and completely grounded presence when navigating intense, chaotic enterprise infrastructure emergencies.
 
+*   **Operational Commitment:** He recognizes that in critical IT operations environments, absolute responsiveness during incident triage, severe technical escalations, after-hours production needs, or SLA-sensitive events is non-negotiable.
+*   **Leadership & Recharge Mechanics:** To prevent burnout and ensure long-term focus under high corporate stress, he relies on deep personal anchors and structured hobbies to reset his cognitive load:
+    *   *Culinary Roots & Resilience:* Before tech, Matt spent his early career as a professional chef, working his way up from dishwasher to the line. Operating in high-heat kitchens required hyper-vigilant situational awareness to avoid physical harm—a crucible that forged his ability to stay completely calm during chaotic IT incidents. Today, he channels that energy into precise, scratch-made cooking and managing high-heat outdoor pizza ovens.
+    *   *Botanical Management:* He cultivates a diverse collection of indoor plants, recognizing that every variation requires a unique baseline of light, water, and humidity. He applies this exact lens to leadership: you cannot force a plant to grow, but you can engineer a customized environment that naturally fosters autonomy, health, and professional development for the individuals on your team.
+    *   *Marriage, Fatherhood, & Community:* He is a dedicated husband and father who anchors his household in peace, patience, and clear boundaries. Whether coaching youth soccer for 4+ years or building custom Roblox games for his kids, his family provides ultimate stability. As he jokes, "Someone voluntarily committed to spending the rest of their life with me, so I must be pretty easy to work with."
+    *   *Digital/Physical Engineering:* Unplugging through tactical problem solving, adjusting slicing models, and 3D printing functional structures (Orca Slicer, PETG filament, Flashforge AD5X).
+*   **Strategic Outcome:** By relying on these strong family anchors and tactile hobbies to unplug, Matt maintains a highly effective, methodical, and completely grounded presence when navigating intense enterprise infrastructure emergencies.
 ---
 ## 11. APPLIED AI & ENGINEERING: INTERACTIVE PORTFOLIO ARCHITECTURE
 
