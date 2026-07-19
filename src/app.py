@@ -122,21 +122,24 @@ st.markdown(bg_css, unsafe_allow_html=True)
 # --- Google Sheets Logger ---
 def log_interaction(query, answer):
     try:
-        scopes = ['https://www.googleapis.com/auth/spreadsheets']
-        credentials = {
-            "type": "service_account", # <-- This is the missing link!
+        credentials_dict = {
+            "type": "service_account",
+            "project_id": "gen-lang-client-0424821963", # Extracted from your SA email
             "client_email": st.secrets["GCP_SA_EMAIL"],
             "private_key": st.secrets["GCP_SA_PRIVATE_KEY"].replace('\\n', '\n'),
             "token_uri": "https://oauth2.googleapis.com/token",
         }
-        creds = Credentials.from_service_account_info(credentials, scopes=scopes)
-        client = gspread.authorize(creds)
+        
+        # gspread's built-in authenticator automatically handles all required API scopes
+        client = gspread.service_account_from_dict(credentials_dict)
         
         sheet = client.open("CIA_Portfolio_Logger").sheet1
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         sheet.append_row([timestamp, query, answer])
+        
     except Exception as e:
-        st.error(f"Google Sheets Error: {e}")
+        # Upgraded error message to tell us exactly what is failing
+        st.error(f"Google Sheets Error Type: {type(e).__name__} | Message: {e}")
 
 # --- AI Setup ---
 @st.cache_resource
