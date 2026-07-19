@@ -28,7 +28,7 @@ load_dotenv()
 
 # --- Security Gate (Hidden URL Parameter) ---
 if st.query_params.get("token") != st.secrets.get("APP_PASSCODE", ""):
-    st.warning("🔒 **Portfolio Locked:** This interactive agent is currently available by invitation only.")
+    st.warning("🔒 **Portfolio Locked:** This interactive agent is currently available by invitation only. Please contact the owner for access. matthewlorensen@gmail.com")
     st.stop()
 
 # --- CSS / Styling ---
@@ -45,6 +45,7 @@ main_bg_base64 = get_base64_of_bin_file('src/Screenshot 2026-07-17 070620.png')
 sidebar_bg_base64 = get_base64_of_bin_file('src/sidebar.jpg')
 github_icon_base64 = get_base64_of_bin_file('src/github.png')
 gmail_icon_base64 = get_base64_of_bin_file('src/gmail.png')
+linkedin_icon_base64 = get_base64_of_bin_file('src/image_96b463.png') 
 
 bg_css = f"""
 <style>
@@ -67,6 +68,11 @@ bg_css = f"""
         background-color: rgba(15, 23, 42, 0.85); z-index: 0;
     }}
     .stApp > header, .stApp > .main {{ position: relative; z-index: 1; }}
+    
+    /* Kill Streamlit's massive default sidebar padding */
+    [data-testid="stSidebarUserContent"] {{
+        padding-top: 2rem !important;
+    }}
     
     /* Sidebar Background */
     [data-testid="stSidebar"] {{ 
@@ -149,7 +155,7 @@ def load_ai_components():
         "**Suggested Follow-Ups:**\n"
         "*   *[Insert question 1]*\n"
         "*   *[Insert question 2]*\n\n"
-        "*Or, if you have no further questions, please use the **📅 Schedule a Conversation** button in the sidebar to connect with Matt directly.*\n\n"
+        "*Or, if you have no further questions, please use the CTAs in the sidebar to connect with Matt directly.*\n\n"
         "Context:\n{context}"
     )
     
@@ -165,8 +171,9 @@ chain = load_ai_components()
 
 # --- UPGRADED SIDEBAR ---
 with st.sidebar:
-    st.title("Matt Lorensen")
-    st.subheader("Technical Program Manager")
+    # Custom HTML to pull the title up and remove the dead space
+    st.markdown("<h2 style='margin-top: -10px; margin-bottom: 0px;'>Matt Lorensen</h2>", unsafe_allow_html=True)
+    st.markdown("<h4 style='margin-top: 0px; color: #cbd5e1;'>Technical Program Manager</h4>", unsafe_allow_html=True)
     
     st.markdown("---")
     
@@ -177,32 +184,23 @@ with st.sidebar:
     
     st.markdown("---")
     
-    linkedin_badge_html = """
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="matt-lorensen" data-version="v1"></div>
-    """
-    components.html(linkedin_badge_html, height=310)
-    
-    st.markdown("---")
-    
-    st.markdown("### Let's Connect")
-    
-    # Custom HTML CTAs for GitHub and Gmail with Custom Icons
+    # Custom HTML CTAs for LinkedIn, GitHub, and Gmail with Real Icons
     cta_buttons_html = f"""
-    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 5px;">
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+        <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s;">
+            <img src="data:image/png;base64,{linkedin_icon_base64}" width="20" style="margin-right: 10px;"> 
+            <span style="font-weight: 600;">Connect on LinkedIn</span>
+        </a>
+
         <a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s;">
             <img src="data:image/png;base64,{github_icon_base64}" width="20" style="margin-right: 10px; filter: invert(1);"> 
             <span style="font-weight: 600;">View Source on GitHub</span>
         </a>
         
         <a href="mailto:matthew.lorensen@gmail.com" target="_blank" style="display: flex; align-items: center; justify-content: center; background-color: rgba(255,255,255,0.1); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background-color 0.3s;">
-            <img src="data:image/png;base64,{gmail_icon_base64}" width="20" style="margin-right: 10px; filter: invert(1);"> 
+            <img src="data:image/png;base64,{gmail_icon_base64}" width="20" style="margin-right: 10px;"> 
             <span style="font-weight: 600;">Schedule a Conversation</span>
         </a>
-    </div>
-    
-    <div style="font-size: 0.65em; text-align: center; color: rgba(255,255,255,0.5); margin-bottom: 15px;">
-        Icons made by <a href="https://www.flaticon.com/authors/magnific" title="Magnific" target="_blank" style="color: rgba(255,255,255,0.5);">Magnific</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" style="color: rgba(255,255,255,0.5);">www.flaticon.com</a>
     </div>
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
