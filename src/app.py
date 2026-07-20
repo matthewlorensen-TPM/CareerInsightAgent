@@ -47,7 +47,7 @@ sidebar_bg_base64 = get_base64_of_bin_file('src/sidebar.jpg')
 github_icon_base64 = get_base64_of_bin_file('src/github.png')
 gmail_icon_base64 = get_base64_of_bin_file('src/gmail.png')
 linkedin_icon_base64 = get_base64_of_bin_file('src/linkedin.png') 
-reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png') # New Reset Image
+reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png')
 
 bg_css = f"""
 <style>
@@ -118,8 +118,8 @@ bg_css = f"""
         object-fit: contain;
     }}
     
-/* Image-Based Reset Button Styling */
-    [data-testid="stSidebar"] button {
+    /* Image-Based Reset Button Styling */
+    [data-testid="stSidebar"] button {{
         background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
         background-size: contain !important;
         background-position: center !important;
@@ -130,17 +130,19 @@ bg_css = f"""
         height: 105px !important; 
         width: 100% !important;
         transition: all 0.3s ease;
-    }
+    }}
     
-    /* Completely destroy the native text element instead of making it transparent */
-    [data-testid="stSidebar"] button p {
-        display: none !important; 
-    }
+    /* Hide all internal text elements within the button to showcase the background image */
+    [data-testid="stSidebar"] button div,
+    [data-testid="stSidebar"] button p,
+    [data-testid="stSidebar"] button span {{
+        visibility: hidden !important; 
+    }}
     
-    [data-testid="stSidebar"] button:hover {
+    [data-testid="stSidebar"] button:hover {{
         transform: translateY(-2px);
         filter: brightness(1.2);
-    }
+    }}
 </style>
 """
 st.markdown(bg_css, unsafe_allow_html=True)
@@ -272,7 +274,6 @@ with st.sidebar:
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
     
-    # The text is hidden via CSS, but the button functionality remains intact
     if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
@@ -324,7 +325,6 @@ if user_query := st.chat_input("Ask me about Matt's career..."):
         status_container = st.empty()
         with status_container.status("🚀 Pulling calculations and context...", expanded=True) as status:
             try:
-                # Format the last 4 messages (2 turns) for the AI window memory
                 chat_history = []
                 history_window = st.session_state.messages[-5:-1]
                 
@@ -334,7 +334,6 @@ if user_query := st.chat_input("Ask me about Matt's career..."):
                     else:
                         chat_history.append(AIMessage(content=msg["content"]))
 
-                # Pass both the new query and the chat history into the chain
                 response = chain.invoke({"input": user_query, "chat_history": chat_history})
                 answer = response["answer"]
                 
