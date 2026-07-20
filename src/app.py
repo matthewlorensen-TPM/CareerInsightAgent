@@ -149,7 +149,7 @@ def load_ai_components():
         st.error("GOOGLE_API_KEY not found in Streamlit secrets!")
         st.stop()
     
-    embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     vector_store = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
     retriever = vector_store.as_retriever(search_kwargs={"k": 8}) 
     
