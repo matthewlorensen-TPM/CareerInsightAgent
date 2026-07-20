@@ -18,7 +18,7 @@ from langchain_core.prompts import ChatPromptTemplate
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="Matthew 'Matt' Lorensen | AI Portfolio",
+    page_title="Matthew 'Matt' Lorensen | Career Insight Agent",
     page_icon="⚙️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -28,7 +28,7 @@ load_dotenv()
 
 # --- Security Gate (Hidden URL Parameter) ---
 if st.query_params.get("token") != st.secrets.get("APP_PASSCODE", ""):
-    st.warning("🔒 **Portfolio Locked:** This interactive agent is currently available by invitation only.")
+    st.warning("🔒 **Portfolio Locked:** This interactive agent is currently available by invitation only. If you need access, please contact the owner. matthewlorensen@gmail.com")
     st.stop()
 
 # --- CSS / Styling ---
@@ -201,7 +201,7 @@ chain = load_ai_components()
 with st.sidebar:
     # Custom HTML to pull the title up and remove the dead space
     st.markdown("<h2 style='margin-top: -10px; margin-bottom: 0px;'>Matt Lorensen</h2>", unsafe_allow_html=True)
-    st.markdown("<h4 style='margin-top: 0px; color: #cbd5e1;'>Technical Program Manager</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='margin-top: 0px; color: #cbd5e1;'>Technical Program Leader</h4>", unsafe_allow_html=True)
     
     st.markdown("---")
     
