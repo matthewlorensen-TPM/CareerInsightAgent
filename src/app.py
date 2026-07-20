@@ -118,26 +118,29 @@ bg_css = f"""
         object-fit: contain;
     }}
     
-    /* Image-Based Reset Button Styling */
-    div[data-testid="stSidebar"] .stButton > button {{
-        background-image: url("data:image/png;base64,{reset_icon_base64}");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+/* Image-Based Reset Button Styling */
+    [data-testid="stSidebar"] button {
+        background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
         background-color: transparent !important;
         border: none !important;
         box-shadow: none !important;
-        height: 105px; /* Exactly 3x the size of the 35px CTA icons */
-        width: 100%;
+        height: 105px !important; 
+        width: 100% !important;
         transition: all 0.3s ease;
-    }}
-    div[data-testid="stSidebar"] .stButton > button * {{
-        color: transparent !important; /* Hides the native Streamlit text */
-    }}
-    div[data-testid="stSidebar"] .stButton > button:hover {{
+    }
+    
+    /* Completely destroy the native text element instead of making it transparent */
+    [data-testid="stSidebar"] button p {
+        display: none !important; 
+    }
+    
+    [data-testid="stSidebar"] button:hover {
         transform: translateY(-2px);
         filter: brightness(1.2);
-    }}
+    }
 </style>
 """
 st.markdown(bg_css, unsafe_allow_html=True)
