@@ -118,8 +118,8 @@ bg_css = f"""
         object-fit: contain;
     }}
     
-    /* Image-Based Reset Button Styling */
-    [data-testid="stSidebar"] button {{
+    /* Image-Based Reset Button Styling (Scoped strictly to Sidebar Body Content) */
+    [data-testid="stSidebarUserContent"] .stButton > button {{
         background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
         background-size: contain !important;
         background-position: center !important;
@@ -132,14 +132,14 @@ bg_css = f"""
         transition: all 0.3s ease;
     }}
     
-    /* Hide all internal text elements within the button to showcase the background image */
-    [data-testid="stSidebar"] button div,
-    [data-testid="stSidebar"] button p,
-    [data-testid="stSidebar"] button span {{
+    /* Hide text elements inside the user sidebar reset button */
+    [data-testid="stSidebarUserContent"] .stButton > button div,
+    [data-testid="stSidebarUserContent"] .stButton > button p,
+    [data-testid="stSidebarUserContent"] .stButton > button span {{
         visibility: hidden !important; 
     }}
     
-    [data-testid="stSidebar"] button:hover {{
+    [data-testid="stSidebarUserContent"] .stButton > button:hover {{
         transform: translateY(-2px);
         filter: brightness(1.2);
     }}
@@ -246,7 +246,7 @@ chain = load_ai_components()
 
 # --- UPGRADED SIDEBAR ---
 with st.sidebar:
-    st.markdown("<div style='text-align: center;'><h2 style='margin-top: -10px; margin-bottom: 0px;'>Matt Lorensen</h2></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center;'><h2 style='margin-top: -10px; margin-bottom: 0px; font-size: 22pt;'>Matt Lorensen</h2></div>", unsafe_allow_html=True)
     st.markdown("<div style='text-align: center;'><h4 style='margin-top: 0px; margin-bottom: 8px; color: #cbd5e1;'>Technical Program Leader</h4></div>", unsafe_allow_html=True)
     
     st.markdown(
