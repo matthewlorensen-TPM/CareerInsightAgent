@@ -37,7 +37,7 @@ def build_vector_database():
     print(f"Created {len(chunks)} chunks. Testing Google API connection...")
     
     # 3. Check Embeddings
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     try:
         test_embed = embeddings.embed_query("Test connection")
         print("API connection successful!")
