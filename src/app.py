@@ -1,3 +1,9 @@
+# --- SQLite3 Patch for Streamlit Cloud ---
+# This must remain at the very top of the script before any other imports
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import os
 import base64
 from datetime import datetime
@@ -5,9 +11,8 @@ import streamlit as st
 import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
-# --- New Google Sheets Imports ---
+# --- Google Sheets Imports ---
 import gspread
-from google.oauth2.service_account import Credentials
 
 # --- LangChain Imports ---
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
@@ -20,7 +25,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 # 1. Page Configuration
 st.set_page_config(
     page_title="Matthew 'Matt' Lorensen | Career Insight Agent",
-    page_icon="⚡",
+    page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -51,6 +56,13 @@ reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png')
 
 bg_css = f"""
 <style>
+    /* HIDE STREAMLIT NATIVE UI ELEMENTS */
+    header {{visibility: hidden !important;}}
+    #MainMenu {{visibility: hidden !important;}}
+    footer {{visibility: hidden !important;}}
+    [data-testid="stHeader"] {{display: none !important;}}
+    [data-testid="stToolbar"] {{display: none !important;}}
+
     html, body, p, h1, h2, h3, h4, h5, h6, li, a, div {{ 
         font-family: "Arial Nova Light", Arial, sans-serif !important; 
     }}
@@ -118,8 +130,9 @@ bg_css = f"""
         object-fit: contain;
     }}
     
-    /* Image-Based Reset Button Styling (Scoped strictly to Sidebar Body Content) */
-    [data-testid="stSidebarUserContent"] .stButton > button {{
+    /* Image-Based Reset Button Styling (Targeted safely to specific container) */
+    div[data-testid="stVerticalBlock"] > div > div > div > div > button.stButton > button,
+    .reset-btn-container button {{
         background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
         background-size: contain !important;
         background-position: center !important;
@@ -132,14 +145,14 @@ bg_css = f"""
         transition: all 0.3s ease;
     }}
     
-    /* Hide text elements inside the user sidebar reset button */
-    [data-testid="stSidebarUserContent"] .stButton > button div,
-    [data-testid="stSidebarUserContent"] .stButton > button p,
-    [data-testid="stSidebarUserContent"] .stButton > button span {{
+    /* Hide text elements inside the specific reset button */
+    .reset-btn-container button div,
+    .reset-btn-container button p,
+    .reset-btn-container button span {{
         visibility: hidden !important; 
     }}
     
-    [data-testid="stSidebarUserContent"] .stButton > button:hover {{
+    .reset-btn-container button:hover {{
         transform: translateY(-2px);
         filter: brightness(1.2);
     }}
@@ -274,9 +287,13 @@ with st.sidebar:
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
     
-    if st.button("invisible_reset_text", use_container_width=True):
-        st.session_state.messages = []
-        st.rerun()
+    # Safe container wrapper for the reset button
+    with st.container():
+        st.markdown("<div class='reset-btn-container'>", unsafe_allow_html=True)
+        if st.button("invisible_reset_text", use_container_width=True):
+            st.session_state.messages = []
+            st.rerun()
+        st.markdown("</div>", unsafe_allow_html=True)
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
@@ -308,7 +325,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 for idx, message in enumerate(st.session_state.messages):
-    avatar = "🧑" if message["role"] == "user" else "⚙️"
+    avatar = "🧑" if message["role"] == "user" else "🤖"
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
         if message["role"] == "assistant":
