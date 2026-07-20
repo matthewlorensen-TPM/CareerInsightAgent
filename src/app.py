@@ -56,12 +56,10 @@ reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png')
 
 bg_css = f"""
 <style>
-    /* HIDE STREAMLIT NATIVE UI ELEMENTS */
-    header {{visibility: hidden !important;}}
+    /* HIDE SPECIFIC STREAMLIT NATIVE UI ELEMENTS (Keeps the sidebar toggle arrow visible) */
     #MainMenu {{visibility: hidden !important;}}
     footer {{visibility: hidden !important;}}
-    [data-testid="stHeader"] {{display: none !important;}}
-    [data-testid="stToolbar"] {{display: none !important;}}
+    .stAppDeployButton {{display: none !important;}}
 
     html, body, p, h1, h2, h3, h4, h5, h6, li, a, div {{ 
         font-family: "Arial Nova Light", Arial, sans-serif !important; 
@@ -130,9 +128,8 @@ bg_css = f"""
         object-fit: contain;
     }}
     
-    /* Image-Based Reset Button Styling (Targeted safely to specific container) */
-    div[data-testid="stVerticalBlock"] > div > div > div > div > button.stButton > button,
-    .reset-btn-container button {{
+    /* Image-Based Reset Button Styling (Laser-targeted to only the st.button widget in the sidebar) */
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button {{
         background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
         background-size: contain !important;
         background-position: center !important;
@@ -146,13 +143,13 @@ bg_css = f"""
     }}
     
     /* Hide text elements inside the specific reset button */
-    .reset-btn-container button div,
-    .reset-btn-container button p,
-    .reset-btn-container button span {{
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button div,
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button p,
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button span {{
         visibility: hidden !important; 
     }}
     
-    .reset-btn-container button:hover {{
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button:hover {{
         transform: translateY(-2px);
         filter: brightness(1.2);
     }}
@@ -287,13 +284,9 @@ with st.sidebar:
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
     
-    # Safe container wrapper for the reset button
-    with st.container():
-        st.markdown("<div class='reset-btn-container'>", unsafe_allow_html=True)
-        if st.button("invisible_reset_text", use_container_width=True):
-            st.session_state.messages = []
-            st.rerun()
-        st.markdown("</div>", unsafe_allow_html=True)
+    if st.button("invisible_reset_text", use_container_width=True):
+        st.session_state.messages = []
+        st.rerun()
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
