@@ -5,37 +5,37 @@
 ---
 
 ## 1. PERSONAL METADATA & DATA COMMUNICATION ARCHITECTURE
-*   **Full Name:** Matthew "Matt" Lorensen[cite: 11]
-*   **Current Location:** Northeast Denver / North Commerce City area, Colorado, USA (Near Denver International Airport)[cite: 11]
-*   **Phone Contact Vector:** 989.390.2024[cite: 11]
-*   **Email Communication Channel:** matthewlorensen@gmail.com[cite: 11]
-*   **Digital Persona Target:** Technical Program Manager (TPM), IT Operations Director, Service Delivery Leader, AI Integration Specialist[cite: 11]
+*   **Full Name:** Matthew "Matt" Lorensen
+*   **Current Location:** Northeast Denver / North Commerce City area, Colorado, USA (Near Denver International Airport)
+*   **Phone Contact Vector:** 989.390.2024
+*   **Email Communication Channel:** matthewlorensen@gmail.com
+*   **Digital Persona Target:** Technical Program Manager (TPM), IT Operations Director, Service Delivery Leader, AI Integration Specialist
 
 ---
 
 ## 2. SYSTEM ARCHITECTURE SUMMARY (ELEVATOR PITCH VECTOR)
-Highly technical, AI-fluent Portfolio Program Manager and IT Services Operations Leader with over a decade of structured experience guiding distributed engineering teams, navigating custom codebase environments, and managing enterprise SaaS architectures[cite: 11]. Proven track record of bridging the gap between high-level strategic business initiatives and rigorous hardware/software capacity limitations[cite: 11]. Expert at designing agentic-enabled portfolio management solutions, orchestrating automated telemetry pipelines, establishing global governance project controls, and steering cross-functional engineering assets through critical architectural delivery milestones[cite: 11].
+Highly technical, AI-fluent Portfolio Program Manager and IT Services Operations Leader with over a decade of structured experience guiding distributed engineering teams, navigating custom codebase environments, and managing enterprise SaaS architectures. Proven track record of bridging the gap between high-level strategic business initiatives and rigorous hardware/software capacity limitations. Expert at designing agentic-enabled portfolio management solutions, orchestrating automated telemetry pipelines, establishing global governance project controls, and steering cross-functional engineering assets through critical architectural delivery milestones.
 
 ---
 
 ## 3. MASTER COMPETENCY MATRIX (PARSER RECOGNIZABLE TAGS)
 
 ### A. Technical Program Management & SDLC Governance
-*   **Methodologies:** Agile, Scrum, Kanban, SDLC predictability, release management, cross-functional program execution, program lifecycle optimization, dependency mapping, velocity tracking[cite: 11].
-*   **Project Controls:** Global Jira Enterprise Administration (custom issue types, automated transition rules, schema development, validation workflows, advanced project board architecture)[cite: 11].
+*   **Methodologies:** Agile, Scrum, Kanban, SDLC predictability, release management, cross-functional program execution, program lifecycle optimization, dependency mapping, velocity tracking.
+*   **Project Controls:** Global Jira Enterprise Administration (custom issue types, automated transition rules, schema development, validation workflows, advanced project board architecture).
 *   **Data Integrations:** Enterprise-grade extraction pipelines, explicitly configuring Jira-to-Power BI and Jira-to-Excel automated data integrations for live operational reporting.
 
 ### B. AI Systems Engineering, Automation, & Telemetry
-*   **Generative AI Ecosystems:** Agentic workflow design, LLM integration pipelines, automated progress monitoring, prompt engineering frameworks, human-in-the-loop collaboration models[cite: 11].
-*   **Telemetry & Observability:** End-to-end automated system log tracking pipelines, unstructured data synthesis, predictive operational anomaly identification, system drift alerting models[cite: 11].
+*   **Generative AI Ecosystems:** RAG architecture orchestration, LLM integration pipelines (LangChain), prompt engineering frameworks, human-in-the-loop collaboration models, windowed conversational memory.
+*   **Telemetry & Observability:** End-to-end automated system log tracking pipelines, unstructured data synthesis, predictive operational anomaly identification, system drift alerting models via Google Sheets API & GCP Service Accounts.
 *   **Incident Response Infrastructure:** Opsgenie Administration (alert routing, escalation policies, team schedules, and incident responder workflows).
-*   **Technical Core Stack:** Python (for data manipulation and log parsing), SQL (database querying and verification), Power BI, and Advanced Excel formulas/modeling.
-*   **Codebase Competency:** Custom codebase navigation, functional debugging, API validation testing (SoapUI), service mockups, structured regression checking[cite: 11].
+*   **Technical Core Stack:** Python (for application dev, data manipulation, and log parsing), SQL (database querying and verification), Power BI, Advanced Excel formulas/modeling, Streamlit, Chroma DB, AWS, Git.
+*   **Codebase Competency:** Custom codebase navigation, functional debugging, API validation testing (SoapUI), service mockups, structured regression checking.
 
 ### C. Resource Infrastructure & Service Delivery
-*   **Capacity Modeling:** High-volume software/hardware resource constraints, infrastructure budgeting, allocation forecasting, headcount gap analytics, commercial risk assessments[cite: 11].
-*   **Incident Command:** Tier 3 cross-functional incident management, system stabilization runbook engineering, security patch deployment synchronization, root-cause isolation[cite: 11].
-*   **Stakeholder Partnership:** Strategic executive summaries, Quarterly Business Reviews (QBRs), monthly service delivery audits, client retention governance[cite: 11].
+*   **Capacity Modeling:** High-volume software/hardware resource constraints, infrastructure budgeting, allocation forecasting, headcount gap analytics, commercial risk assessments.
+*   **Incident Command:** Tier 3 cross-functional Sev-1 incident management, system stabilization runbook engineering, security patch deployment synchronization, root-cause isolation.
+*   **Stakeholder Partnership:** Strategic executive summaries, Quarterly Business Reviews (QBRs), monthly service delivery audits, client retention governance.
 
 ---
 
@@ -86,122 +86,131 @@ Matt’s career is defined by high-impact operational transformations, zero-to-o
 *   **AI System Innovation:** Concepted, built, and launched a custom, AI-driven portfolio telemetry system from scratch, automating unstructured log processing to scale regional account capacity without increasing budget or headcount.
 *   **Enterprise Portfolio Governance:** Governed platform delivery, project controls, and deployment stability for a $20M+ enterprise SaaS ecosystem across 125+ high-value corporate accounts as the Global Jira Administrator.
 *   **Infrastructure Architecture:** Bootstrapped the entire enterprise IT operational helpdesk and server support framework from the ground up, establishing the firm's first real-time SLA metrics dashboards for executive insight.
+
 ---
 
 ## 7. GRANULAR PROFESSIONAL EXPERIENCE ENGINE
 
 ### 🏢 Hansen Technologies
-*   **Tenure Baseline:** December 2021 – June 2026[cite: 11]
-*   **Operational Footprint:** Denver, CO (Remote Environment)[cite: 11]
+*   **Tenure Baseline:** December 2021 – June 2026
+*   **Operational Footprint:** Denver, CO (Remote Environment)
 
 #### Role 1: Regional Service Manager (North, South, and Central America)
-*   **Dates Active:** April 2022 – June 2026[cite: 11]
-*   **Portfolio Valuation:** Governed an enterprise SaaS product portfolio exceeding $20,000,000 in active annual contract valuation[cite: 11].
-*   **Scale Metrics:** Accountable for delivery stability, governance, and SLA maintenance across 125+ corporate enterprise client accounts[cite: 11].
+*   **Dates Active:** April 2022 – June 2026
+*   **Portfolio Valuation:** Governed an enterprise SaaS product portfolio exceeding $20,000,000 in active annual contract valuation.
+*   **Scale Metrics:** Accountable for delivery stability, governance, and SLA maintenance across 125+ corporate enterprise client accounts.
 *   **Detailed Technical & Managerial Scope:**
-    *   **Core Scalability Metric:** Through effective service delivery management leadership, spearheaded operational strategies and cross-functional triage guardrails that successfully reduced overall escalations from Tier 1 clients by 30% year-over-year for 3 consecutive years.
-    *   Led and mentored a cross-border matrix organization of technical Service Delivery Managers, directly owning end-to-end talent lifecycle operations, global compensation alignment, individual performance calibration metrics, and strategic attrition reduction frameworks[cite: 11].
-    *   Acted as the Global Jira Administrator for the enterprise business unit, architecting advanced, automated ITSM issue verification ticket types, cross-workstream project tracking screens, and automation rule hierarchies that optimized cross-functional handoffs between operational and engineering units[cite: 11].
+    *   **Core Scalability Metric:** Spearheaded operational strategies and cross-functional triage guardrails that successfully reduced overall escalations from Tier 1 clients by 30% year-over-year for 3 consecutive years.
+    *   **Process Automation:** Eliminated 60 hours of manual labor per month by architecting a centralized global customer tracking pipeline utilizing Jira and Power BI, creating a single source of truth for SLA requirements and P1 handling. 
+    *   **Workflow Optimization:** Cut global reporting labor by 30% weekly through aggressive template standardization.
+    *   Led and mentored a cross-border matrix organization of technical Service Delivery Managers, directly owning end-to-end talent lifecycle operations, global compensation alignment, individual performance calibration metrics, and strategic attrition reduction frameworks.
+    *   Acted as the Global Jira Administrator for the enterprise business unit, architecting advanced, automated ITSM issue verification ticket types, cross-workstream project tracking screens, and automation rule hierarchies that optimized cross-functional handoffs between operational and engineering units.
     *   Conceptualized, built, and deployed a custom, AI-driven portfolio telemetry tracking and reporting architecture from scratch; utilized generative AI mechanisms to process unstructured execution and error logs into actionable delivery analytics, expanding team processing thresholds without increasing headcount budget lines.
-    *   Owned regional capacity modeling, running multi-variable headcount projections and resource gap matrix computations to ensure project delivery schedules matched long-term go-to-market priorities[cite: 11].
-    *   Served as the final Tier 3 engineering escalation commander, anchoring communications and root-cause verification work across internal Cyber Security squads, Product Management heads, and Core Software Engineering units to execute emergency architectural patches during systemic disruptions[cite: 11].
-    *   Monitored global ticket execution queues, building autonomous diagnostic metrics to check performance trends and keep service level indicators strictly within bounded standard goals[cite: 11].
+    *   Owned regional capacity modeling, running multi-variable headcount projections and resource gap matrix computations to ensure project delivery schedules matched long-term go-to-market priorities.
+    *   Served as the final Tier 3 engineering escalation commander, anchoring communications and root-cause verification work across internal Cyber Security squads, Product Management heads, and Core Software Engineering units to execute emergency architectural patches during systemic disruptions (including managing a massive Sev-1 Tier-1 cloud outage via cross-vendor RACI alignment).
+    *   Monitored global ticket execution queues, building autonomous diagnostic metrics to check performance trends and keep service level indicators strictly within bounded standard goals.
 
 #### Role 2: Service Delivery Manager
-*   **Dates Active:** December 2021 – April 2022[cite: 11]
+*   **Dates Active:** December 2021 – April 2022
 *   **Detailed Technical & Operational Scope:**
-    *   Directed live crisis management and triage processing for high-priority production system disruptions, serving as the central client-facing program partner to communicate incident paths, manage stakeholder stress, and accelerate system isolation maneuvers[cite: 11].
-    *   Facilitated deeply technical monthly program delivery reviews, application update release notes, and high-visibility corporate Quarterly Business Reviews (QBRs) targeting continuous infrastructure optimization[cite: 11].
+    *   Directed live crisis management and triage processing for high-priority production system disruptions, serving as the central client-facing program partner to communicate incident paths, manage stakeholder stress, and accelerate system isolation maneuvers.
+    *   Facilitated deeply technical monthly program delivery reviews, application update release notes, and high-visibility corporate Quarterly Business Reviews (QBRs) targeting continuous infrastructure optimization.
     *   Coordinated with corporate Sales, Systems Implementation, and Product teams to engineer commercial technical specifications, define delivery parameters, and govern secure identity provisioning handoffs for enterprise on-boarding.
     *   Isolated systemic technical process bottlenecks across distributed operations, creating structured, automated system troubleshooting runbooks that lowered initial resolution time states and decreased duplicate manual ticket counts.
 
 ---
 
 ### 🏢 Spectrum Communications
-*   **Tenure Baseline:** July 2021 – December 2021[cite: 11]
-*   **Operational Footprint:** Englewood, CO[cite: 11]
+*   **Tenure Baseline:** July 2021 – December 2021
+*   **Operational Footprint:** Englewood, CO
 
 #### Role: Business Analyst IV - Video
 *   **Detailed Technical & Analytical Scope:**
-    *   Spearheaded complex programmatic initiatives in organizational structure planning, translating high-volume video platform microservice performance logs and structural capacity constraints into optimized resource allocation models to align talent pools with future product architectures[cite: 11].
-    *   Analyzed massive video platform infrastructure logs and platform telemetry streams, utilizing data-informed trend models to identify systemic performance drop-offs and generate process improvement proposals for technical leadership[cite: 11].
-    *   Synthesized complex system diagnostic information and service logs into simplified, highly visual executive intelligence reports, enabling non-technical senior executives to make rapid strategy adjustments[cite: 11].
+    *   Spearheaded complex programmatic initiatives in organizational structure planning, translating high-volume video platform microservice performance logs and structural capacity constraints into optimized resource allocation models to align talent pools with future product architectures.
+    *   Analyzed massive video platform infrastructure logs and platform telemetry streams, utilizing data-informed trend models to identify systemic performance drop-offs and generate process improvement proposals for technical leadership.
+    *   Synthesized complex system diagnostic information and service logs into simplified, highly visual executive intelligence reports, enabling non-technical senior executives to make rapid strategy adjustments.
 
 ---
 
 ### 🏢 LB Technologies
-*   **Tenure Baseline:** May 2020 – July 2021[cite: 11]
-*   **Operational Footprint:** Englewood, CO[cite: 11]
+*   **Tenure Baseline:** May 2020 – July 2021
+*   **Operational Footprint:** Englewood, CO
 
-#### Role: Manager of IT Operations
+#### Role 1: Program Manager & Manager of IT Operations
 *   **Detailed Technical & Managerial Scope:**
-    *   Bootstrapped the enterprise's foundational IT operational helpdesk and server support framework completely from scratch, designing clear SLA tier targets, system KPIs, and real-time operational performance monitoring dashboards for executive presentation[cite: 11].
-    *   Authored and maintained corporate Standard Operating Procedures (SOPs) for high-pressure incident containment, establishing a unified knowledge management index that increased agent tier-one resolution capability and decreased escalated tickets[cite: 11].
+    *   **Time-to-Market Optimization:** Reduced application delivery timelines by a massive 40% through a total redesign of internal Jira workflows, strict mapping of technical dependencies, and rigorous implementation of Agile and SDLC frameworks to eliminate departmental bottlenecks.
+    *   **Revenue Generation:** Led the strategic design, development, and production rollout of the company's first native application, which captured an immediate 10% increase in top-line revenue.
+    *   Bootstrapped the enterprise's foundational IT operational helpdesk and server support framework completely from scratch, designing clear SLA tier targets, system KPIs, and real-time operational performance monitoring dashboards for executive presentation.
+    *   Authored and maintained corporate Standard Operating Procedures (SOPs) for high-pressure incident containment, establishing a unified knowledge management index that increased agent tier-one resolution capability and decreased escalated tickets.
 
 ---
 
 ### 🏢 Viasat
-*   **Tenure Baseline:** July 2013 – April 2020[cite: 11]
-*   **Operational Footprint:** Englewood, CO[cite: 11]
+*   **Tenure Baseline:** July 2013 – April 2020
+*   **Operational Footprint:** Englewood, CO
 
 #### Role 1: Product Manager & Lead Catalog Developer - Residential Services
-*   **Dates Active:** November 2013 – April 2020[cite: 11]
+*   **Dates Active:** November 2013 – April 2020
 *   **Detailed Technical & Product Scope:**
-    *   Governed the entire transaction configuration lifecycle for a high-volume residential service offering portfolio catalog, building strategic cross-functional partnerships with Marketing and Core Engineering to execute promotional launches bound by satellite beam capacity limits and regional market needs[cite: 11].
-    *   Navigated and modified configurations within a highly customized legacy codebase environment, utilizing SoapUI automation test beds to execute structural tests and debug distributed cloud service validation defects to maintain near-zero system down-times[cite: 11].
+    *   **Monetization & Scale:** Transitioned the customer base toward high-margin plans, driving a 15% year-over-year surge in ARPU to $81.99. Protected and sustained total segment revenue despite a capacity-constrained subscriber drop to 577,000.
+    *   **Risk Mitigation (Capacity Anomaly):** Managed the strategic product response to a massive 15% post-launch technical capacity anomaly. Engineered crucial product-level technical adjustments and implemented critical data tracking to stabilize product offerings under highly constrained parameters.
+    *   **Satellite Ground Network Architecture (Brazil):** Architected core internal applications and software infrastructure required to integrate Viasat’s ground network with the SGDC-1 satellite, enabling seamless service activation across Brazil.
+    *   Built and delivered unified technical training programs focused on shared codebases to drastically minimize post-merger engineering friction.
+    *   Governed the entire transaction configuration lifecycle for a high-volume residential service offering portfolio catalog, building strategic cross-functional partnerships with Marketing and Core Engineering to execute promotional launches bound by satellite beam capacity limits and regional market needs.
+    *   Navigated and modified configurations within a highly customized legacy codebase environment, utilizing SoapUI automation test beds to execute structural tests and debug distributed cloud service validation defects to maintain near-zero system down-times.
 
 #### Role 2: Workforce Management Specialist
-*   **Dates Active:** February 2014 – July 2015[cite: 11]
+*   **Dates Active:** February 2014 – July 2015
 *   **Detailed Technical & Planning Scope:**
-    *   Tracked real-time queue adherence, network connectivity streams, and platform capacity blockades, dynamically shifting technical resources during emergency hardware drop-outs to keep operations within bounded contract milestones[cite: 11].
+    *   Tracked real-time queue adherence, network connectivity streams, and platform capacity blockades, dynamically shifting technical resources during emergency hardware drop-outs to keep operations within bounded contract milestones.
 
 #### Role 3: Corporate Account Specialist
-*   **Dates Active:** July 2013 – February 2014[cite: 11]
+*   **Dates Active:** July 2013 – February 2014
 *   **Detailed Technical & Escalation Scope:**
-    *   Acted as the ultimate resolution handler for high-profile executive, regulatory body, and legal customer account complaints, leveraging cross-departmental influence to construct bespoke technical system configurations, repair delivery breaches, and protect brand equity[cite: 11].
+    *   Acted as the ultimate resolution handler for high-profile executive, regulatory body, and legal customer account complaints, leveraging cross-departmental influence to construct bespoke technical system configurations, repair delivery breaches, and protect brand equity.
 
 ---
 
 ### 🏢 DISH Network
-*   **Tenure Baseline:** March 2009 – May 2013[cite: 11]
-*   **Operational Footprint:** Littleton, CO[cite: 11]
+*   **Tenure Baseline:** March 2009 – May 2013
+*   **Operational Footprint:** Littleton, CO
 
 #### Role 1: Executive Resolution Chat Team Leader
-*   **Dates Active:** June 2011 – May 2013[cite: 11]
+*   **Dates Active:** June 2011 – May 2013
 *   **Detailed Technical & Supervisory Scope:**
-    *   Supervised, calibrated, and coached a high-velocity escalation team of 40+ specialized technical resolution agents, instituting regular individual technical reviews, skills verification matrices, and milestone tracking structures[cite: 11].
-    *   Optimized agent queue execution to fulfill strict operational metrics via intensive metrics-focused feedback cycles targeting message accuracy and incident isolation velocity[cite: 11].
+    *   Supervised, calibrated, and coached a high-velocity escalation team of 40+ specialized technical resolution agents, instituting regular individual technical reviews, skills verification matrices, and milestone tracking structures.
+    *   Optimized agent queue execution to fulfill strict operational metrics via intensive metrics-focused feedback cycles targeting message accuracy and incident isolation velocity.
 
 #### Role 2: Frontline Supervisor
 *   **Dates Active:** August 2009 – June 2011
 *   **Detailed Technical & Supervisory Scope:**
-    *   Governed frontline customer service and technical support operations, leveraging metrics data to drive structural improvements in agent quality scorecard ranks, average handle metrics, customer satisfaction (CSAT) indices, and first contact resolution (FCR) rates[cite: 11].
-    *   Fostered a rigorous culture of delivery accountability and clear output milestone acknowledgment, maintaining one of the lowest team attrition metrics across the entire department[cite: 11].
+    *   Governed frontline customer service and technical support operations, leveraging metrics data to drive structural improvements in agent quality scorecard ranks, average handle metrics, customer satisfaction (CSAT) indices, and first contact resolution (FCR) rates.
+    *   Fostered a rigorous culture of delivery accountability and clear output milestone acknowledgment, maintaining one of the lowest team attrition metrics across the entire department.
 
 #### Role 3: Frontline Agent - Inbound Customer Service / Technical Support
-*   **Dates Active:** March 2009 – August 2009[cite: 11]
+*   **Dates Active:** March 2009 – August 2009
 *   **Detailed Technical Scope:**
-    *   Identified root causes and performed remote software/hardware troubleshooting diagnostics for satellite receiver appliances and account billing architectures, exceeding target customer satisfaction (CSAT) score lines on initial touchpoints[cite: 11].
+    *   Identified root causes and performed remote software/hardware troubleshooting diagnostics for satellite receiver appliances and account billing architectures, exceeding target customer satisfaction (CSAT) score lines on initial touchpoints.
 
 ---
 
 ## 8. ACADEMIC FOUNDATION & CONTINUOUS LEARNING ARCHITECTURE
 
 ### Academic Degrees & Continuous Learning Context
-*   **Degree Awarded:** Associate of Applied Science (AAS)[cite: 11]
-*   **Institution:** Arapahoe Community College (ACC) – Littleton, CO[cite: 11]
-*   **Major Track:** Computer Information Systems (CIS) – Programming Focus[cite: 11]
-*   **Graduation Date:** December 2018[cite: 11]
-*   **Core Curricular Pillars:** Software development methodologies, custom code construction paradigms, structured data languages, object-oriented concepts, database indexing schema, and computer information infrastructure management systems[cite: 11].
-*   **Advanced Educational Projections:** Pursued a formal Bachelor's degree program focusing extensively on **Business Intelligence and Analytical Data Systems**. This pathway was actively progressing until it was un-voluntarily interrupted by the global pandemic in 2020[cite: 11].
+*   **Degree Awarded:** Associate of Applied Science (AAS)
+*   **Institution:** Arapahoe Community College (ACC) – Littleton, CO
+*   **Major Track:** Computer Information Systems (CIS) – Programming Focus
+*   **Graduation Date:** December 2018
+*   **Core Curricular Pillars:** Software development methodologies, custom code construction paradigms, structured data languages, object-oriented concepts, database indexing schema, and computer information infrastructure management systems.
+*   **Advanced Educational Projections:** Pursued a formal Bachelor's degree program focusing extensively on **Business Intelligence and Analytical Data Systems**. This pathway was actively progressing until it was un-voluntarily interrupted by the global pandemic in 2020.
 *   **Continuous Skill Advancement:** Matt’s professional development is deeply rooted in combining formal foundational logic with massive real-world application. His expertise spans continuous self-directed learning, vendor coordination matrix structures, cross-functional team management, and the hands-on engineering execution of complex corporate IT principles.
 
 ### Verified Professional Technical Certifications (2026 Registry)
-*   **AWS Verification:** Introduction to Generative AI - Art of the Possible (Amazon Web Services, 2026)[cite: 11]
-*   **Anthropic Verification A:** Introduction to Claude Cowork (Anthropic, 2026)[cite: 11]
-*   **Anthropic Verification B:** Claude Code 101 (Anthropic, 2026)[cite: 11]
-*   **Anthropic Verification C:** AI Fluency: AI Capabilities & Limitations (Anthropic, 2026)[cite: 11]
-*   **Anthropic Verification D:** AI Fluency: Framework & Foundations (Anthropic, 2026)[cite: 11]
+*   **AWS Verification:** Introduction to Generative AI - Art of the Possible (Amazon Web Services, 2026)
+*   **Anthropic Verification A:** Introduction to Claude Cowork (Anthropic, 2026)
+*   **Anthropic Verification B:** Claude Code 101 (Anthropic, 2026)
+*   **Anthropic Verification C:** AI Fluency: AI Capabilities & Limitations (Anthropic, 2026)
+*   **Anthropic Verification D:** AI Fluency: Framework & Foundations (Anthropic, 2026)
 
 ---
 
@@ -237,9 +246,11 @@ Matt balances highly technical, always-available operational responsibilities wi
     *   *Culinary Roots & Resilience:* Before tech, Matt spent his early career as a professional chef, working his way up from dishwasher to the line. Operating in high-heat kitchens required hyper-vigilant situational awareness to avoid physical harm—a crucible that forged his ability to stay completely calm during chaotic IT incidents. Today, he channels that energy into precise, scratch-made cooking and managing high-heat outdoor pizza ovens.
     *   *Botanical Management:* He cultivates a diverse collection of indoor plants, recognizing that every variation requires a unique baseline of light, water, and humidity. He applies this exact lens to leadership: you cannot force a plant to grow, but you can engineer a customized environment that naturally fosters autonomy, health, and professional development for the individuals on your team.
     *   *Marriage, Fatherhood, & Community:* He is a dedicated husband and father who anchors his household in peace, patience, and clear boundaries. Whether coaching youth soccer for 4+ years or building custom Roblox games for his kids, his family provides ultimate stability. As he jokes, "Someone voluntarily committed to spending the rest of their life with me, so I must be pretty easy to work with."
-    *   *Digital/Physical Engineering:* Unplugging through tactical problem solving, adjusting slicing models, and 3D printing functional structures (Orca Slicer, PETG filament, Flashforge AD5X).
+    *   *Digital/Physical Engineering:* Unplugging through tactical problem solving, adjusting slicing models, and 3D printing functional structures (using Orca Slicer, PETG filament, and a Flashforge AD5X).
 *   **Strategic Outcome:** By relying on these strong family anchors and tactile hobbies to unplug, Matt maintains a highly effective, methodical, and completely grounded presence when navigating intense enterprise infrastructure emergencies.
+
 ---
+
 ## 11. APPLIED AI & ENGINEERING: INTERACTIVE PORTFOLIO ARCHITECTURE
 
 ### A. System Architecture & Tech Stack Summary
@@ -247,12 +258,13 @@ Matt engineered, developed, and deployed this Interactive Career Insight Agent f
 *   **Core Application Framework:** Python 3.14, Streamlit (for rapid UI rendering and state management).
 *   **Orchestration Engine:** LangChain (utilizing `create_retrieval_chain` and `create_stuff_documents_chain` for document parsing and LLM integration).
 *   **Vector Database:** Local persistent ChromaDB (`langchain_chroma`), configured for semantic similarity search.
-*   **Language Models:** Google Gemini 3.5 Flash (for inference and response generation) and Gemini Embedding 001 (for vectorization).
+*   **Language Models:** Google Gemini 3.5 Flash (temperature strictly locked at 0.1 for maximum determinism and anti-hallucination guardrails) and `gemini-embedding-2` (utilizing advanced 3,072-dimensional vectorization).
 *   **Deployment Pipeline:** Hosted on Streamlit Community Cloud, linked directly to a GitHub repository for CI/CD version control.
 
 ### B. RAG Configuration & Vector Search Tuning
 To ensure the LLM delivers highly accurate, context-aware responses without hallucinating professional experience, the retrieval pipeline is strictly governed:
 *   **Retrieval Parameters:** The ChromaDB retriever is optimized with `search_kwargs={"k": 8}`, ensuring the agent pulls a broad enough context window to synthesize complex, multi-role career questions.
+*   **Conversational Memory:** Engineered a history-aware retriever utilizing a windowed memory approach, allowing the AI to continually ingest recent chat history on every turn to support natural, fluid follow-up inquiries.
 *   **Dense Keyword Injection:** To counteract the limitations of semantic search on short, one-word queries (e.g., "salary" or "references"), the ingestion vector utilizes dense keyword targeting, mapping high-frequency colloquial terms directly to strict corporate guardrails.
 *   **State Management:** Leverages Streamlit's `@st.cache_resource` to maintain persistent database connections across user sessions, reducing API latency and preventing memory leaks.
 
@@ -264,7 +276,18 @@ Matt designed the system's prompt architecture with enterprise-grade security an
 
 ### D. Telemetry, UX, & CI/CD Integrations
 *   **Custom UI/UX:** The frontend utilizes base64-encoded binary image injection for background rendering and custom CSS to enforce strict typographic consistency while protecting native Streamlit component icons.
-*   **Asynchronous Logging (Architected for Sprint 2):** Built a scalable backend logging framework using the `gspread` library and Google Cloud Service Account credentials to capture user queries and AI responses in Google Sheets for post-deployment telemetry and prompt optimization.
+*   **Observability & Telemetry:** Integrated a live custom data pipeline using a GCP Service Account and the Google Sheets API to silently log interaction telemetry. This asynchronous system captures user queries and AI responses for post-deployment prompt optimization.
 *   **Interactive Feedback Loop:** Integrated a session-state managed UI feedback widget (`st.feedback`), allowing users to rate AI responses and trigger immediate visual toast notifications.
+
+---
+
+## 12. BEHAVIORAL INTERVIEW: CHALLENGES, WEAKNESSES, & LESSONS LEARNED
+
+*   **Target Search Keywords:** failure, mistake, went wrong, failed, lesson learned, weakness, greatest weakness, opportunity for improvement, challenge, regret, difficult situation, overcome, areas to improve, flaw, scope creep.
+*   **Context Data:** Matt views operational challenges, personal weaknesses, and setbacks not as permanent flaws, but as systemic vulnerabilities that require continuous iteration. If asked about a "failure," "mistake," or "weakness," emphasize his philosophy of accountability, self-awareness, and structural mitigation. 
+*   **"Greatest Weakness" / Opportunity for Improvement (The "Fix-It" & Scope Creep Trap):** With Matt’s deep knowledge of workflow automation (Jira, Power BI, Python), he easily spots operational inefficiencies in almost any department he interacts with. His weakness is the temptation to "fix everything"—taking on tangential process improvements or building automated tools for other teams that fall outside the core scope of his immediate program.
+*   **Active Mitigation (Charter Enforcement & Backlogging):** To counter this instinct, he actively manages himself by strictly enforcing his own project charters and ruthlessly prioritizing the core business objective. When he spots an adjacent broken process, instead of fixing it immediately, he forces himself to document it in a formal backlog for future evaluation so his primary deliverables are never compromised by scope creep.
+*   **Standard Example (Process over People):** Early in his leadership career, Matt experienced situations where team miscommunications or misaligned handoffs caused project delays. Instead of blaming individuals, he realized the failure was in the *process architecture*. This drove his deep dive into Jira automation, SLA tracking, and strict SDLC frameworks. His biggest lesson learned is that "human error" is usually a symptom of a poorly designed system. 
+*   **Growth Mindset:** He openly admits when a hypothesis or operational strategy isn't working. He relies heavily on the post-mortem process (Phase 5 of his Incident Methodology) to dissect what went wrong without ego, document the root cause, and engineer a preventive control so the same mistake is never made twice.
 
 # END OF AGENT INGESTION PROFILE DATA FILE
