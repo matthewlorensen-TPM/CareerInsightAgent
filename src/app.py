@@ -315,9 +315,9 @@ with st.sidebar:
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
-    # 1. Resume Link (Opens Native PDF Viewer in a New Tab)
+# 1. Resume Link (Opens Native PDF Viewer in a New Tab)
     resume_html = f"""
-    <a href="app/static/Matthew%20Lorensen%20Resume.pdf" target="_blank" style="text-decoration: none;">
+    <a href="/app/static/Matthew_Lorensen_Resume.pdf" target="_blank" style="text-decoration: none;">
         <div class="resume-custom-link"></div>
     </a>
     """
