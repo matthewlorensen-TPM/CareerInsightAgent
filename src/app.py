@@ -53,10 +53,11 @@ github_icon_base64 = get_base64_of_bin_file('src/github.png')
 gmail_icon_base64 = get_base64_of_bin_file('src/gmail.png')
 linkedin_icon_base64 = get_base64_of_bin_file('src/linkedin.png') 
 reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png')
+resume_icon_base64 = get_base64_of_bin_file('src/myresume.png') 
 
 bg_css = f"""
 <style>
-    /* HIDE SPECIFIC STREAMLIT NATIVE UI ELEMENTS (Keeps the sidebar toggle arrow visible) */
+    /* HIDE SPECIFIC STREAMLIT NATIVE UI ELEMENTS */
     #MainMenu {{visibility: hidden !important;}}
     footer {{visibility: hidden !important;}}
     .stAppDeployButton {{display: none !important;}}
@@ -127,31 +128,59 @@ bg_css = f"""
         width: 35px; height: 35px; 
         object-fit: contain;
     }}
+
+    /* Custom HTML Resume Link Styling */
+    .resume-custom-link {{
+        background-image: url("data:image/png;base64,{resume_icon_base64}");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        /* Matched to social buttons */
+        background-color: rgba(255, 255, 255, 0.03); 
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        
+        height: 105px;
+        width: 100%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 5px; 
+    }}
+    .resume-custom-link:hover {{
+        background-color: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+    }}
     
-    /* Image-Based Reset Button Styling (Laser-targeted to only the st.button widget in the sidebar) */
-    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button {{
+    /* Image-Based RESET Button Styling */
+    .reset-btn-container button {{
         background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
         background-size: contain !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
-        background-color: transparent !important;
-        border: none !important;
+        
+        /* Matched to social buttons */
+        background-color: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 14px !important;
+        
         box-shadow: none !important;
         height: 105px !important; 
         width: 100% !important;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease !important;
     }}
     
-    /* Hide text elements inside the specific reset button */
-    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button div,
-    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button p,
-    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button span {{
+    .reset-btn-container button div,
+    .reset-btn-container button p,
+    .reset-btn-container button span {{
         visibility: hidden !important; 
     }}
     
-    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button:hover {{
-        transform: translateY(-2px);
-        filter: brightness(1.2);
+    .reset-btn-container button:hover {{
+        background-color: rgba(255, 255, 255, 0.12) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+        transform: translateY(-2px) !important;
     }}
 </style>
 """
@@ -282,11 +311,23 @@ with st.sidebar:
     </div>
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
     
-    if st.button("invisible_reset_text", use_container_width=True):
-        st.session_state.messages = []
-        st.rerun()
+    # 1. Resume Link (Opens Native PDF Viewer in a New Tab)
+    resume_html = f"""
+    <a href="app/static/Matthew%20Lorensen%20Resume.pdf" target="_blank" style="text-decoration: none;">
+        <div class="resume-custom-link"></div>
+    </a>
+    """
+    st.markdown(resume_html, unsafe_allow_html=True)
+
+    # 2. Reset Conversation Button
+    with st.container():
+        st.markdown("<div class='reset-btn-container'>", unsafe_allow_html=True)
+        if st.button("invisible_reset_text", use_container_width=True):
+            st.session_state.messages = []
+            st.rerun()
+        st.markdown("</div>", unsafe_allow_html=True)
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
