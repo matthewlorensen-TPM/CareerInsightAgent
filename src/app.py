@@ -20,7 +20,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 # 1. Page Configuration
 st.set_page_config(
     page_title="Matthew 'Matt' Lorensen | Career Insight Agent",
-    page_icon="⚙️",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
 )
