@@ -145,7 +145,8 @@ bg_css = f"""
         width: 100%;
         cursor: pointer;
         transition: all 0.3s ease;
-        margin-bottom: 5px; 
+        margin-bottom: -5px; 
+        display: block;
     }}
     .resume-custom-link:hover {{
         background-color: rgba(255, 255, 255, 0.12);
@@ -153,8 +154,8 @@ bg_css = f"""
         transform: translateY(-2px);
     }}
     
-    /* Image-Based RESET Button Styling */
-    .reset-btn-container button {{
+    /* Image-Based RESET Button Styling (Direct Streamlit target) */
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button {{
         background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
         background-size: contain !important;
         background-position: center !important;
@@ -169,15 +170,17 @@ bg_css = f"""
         height: 105px !important; 
         width: 100% !important;
         transition: all 0.3s ease !important;
+        padding: 0 !important;
     }}
     
-    .reset-btn-container button div,
-    .reset-btn-container button p,
-    .reset-btn-container button span {{
-        visibility: hidden !important; 
+    /* Hide the native text inside the Reset button */
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button div,
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button p,
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button span {{
+        display: none !important; 
     }}
     
-    .reset-btn-container button:hover {{
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button:hover {{
         background-color: rgba(255, 255, 255, 0.12) !important;
         border-color: rgba(255, 255, 255, 0.4) !important;
         transform: translateY(-2px) !important;
@@ -311,7 +314,6 @@ with st.sidebar:
     </div>
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
-    st.markdown("<br>", unsafe_allow_html=True)
     
     # 1. Resume Link (Opens Native PDF Viewer in a New Tab)
     resume_html = f"""
@@ -321,13 +323,10 @@ with st.sidebar:
     """
     st.markdown(resume_html, unsafe_allow_html=True)
 
-    # 2. Reset Conversation Button
-    with st.container():
-        st.markdown("<div class='reset-btn-container'>", unsafe_allow_html=True)
-        if st.button("invisible_reset_text", use_container_width=True):
-            st.session_state.messages = []
-            st.rerun()
-        st.markdown("</div>", unsafe_allow_html=True)
+    # 2. Reset Conversation Button (Uses native targeting)
+    if st.button("invisible_reset_text", use_container_width=True):
+        st.session_state.messages = []
+        st.rerun()
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
