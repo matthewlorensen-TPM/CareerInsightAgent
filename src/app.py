@@ -9,12 +9,13 @@ from dotenv import load_dotenv
 import gspread
 from google.oauth2.service_account import Credentials
 
-# Use these exact, standard paths
+# --- LangChain Imports ---
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_chroma import Chroma
-from langchain_classic.chains import create_retrieval_chain
-from langchain_classic.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.prompts import ChatPromptTemplate
+from langchain.chains import create_retrieval_chain, create_history_aware_retriever
+from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.messages import HumanMessage, AIMessage
 
 # 1. Page Configuration
 st.set_page_config(
@@ -103,7 +104,7 @@ bg_css = f"""
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 14px;
         text-decoration: none;
-        width: 65px; height: 65px; /* Adjusted container */
+        width: 65px; height: 65px; 
         transition: all 0.3s ease;
     }}
     .social-btn:hover {{
@@ -112,7 +113,7 @@ bg_css = f"""
         transform: translateY(-2px);
     }}
     .social-btn img {{
-        width: 35px; height: 35px; /* 15% larger icon */
+        width: 35px; height: 35px; 
         object-fit: contain;
     }}
 </style>
@@ -124,22 +125,20 @@ def log_interaction(query, answer):
     try:
         credentials_dict = {
             "type": "service_account",
-            "project_id": "gen-lang-client-0424821963", # Extracted from your SA email
+            "project_id": "gen-lang-client-0424821963",
             "client_email": st.secrets["GCP_SA_EMAIL"],
             "private_key": st.secrets["GCP_SA_PRIVATE_KEY"].replace('\\n', '\n'),
             "token_uri": "https://oauth2.googleapis.com/token",
         }
         
-        # gspread's built-in authenticator automatically handles all required API scopes
         client = gspread.service_account_from_dict(credentials_dict)
-        
         sheet = client.open("CIA_Portfolio_Logger").sheet1
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         sheet.append_row([timestamp, query, answer])
         
     except Exception as e:
-        # Upgraded error message to tell us exactly what is failing
         st.error(f"Google Sheets Error Type: {type(e).__name__} | Message: {e}")
+        st.stop()
 
 # --- AI Setup ---
 @st.cache_resource
@@ -156,6 +155,25 @@ def load_ai_components():
     
     llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
     
+    # 1. Contextualize Question Prompt (Teaches the AI to understand follow-ups)
+    contextualize_q_system_prompt = (
+        "Given a chat history and the latest user question "
+        "which might reference context in the chat history, "
+        "formulate a standalone question which can be understood "
+        "without the chat history. Do NOT answer the question, "
+        "just reformulate it if needed and otherwise return it as is."
+    )
+    contextualize_q_prompt = ChatPromptTemplate.from_messages([
+        ("system", contextualize_q_system_prompt),
+        MessagesPlaceholder("chat_history"),
+        ("human", "{input}"),
+    ])
+    
+    history_aware_retriever = create_history_aware_retriever(
+        llm, retriever, contextualize_q_prompt
+    )
+
+    # 2. Main Response Prompt (Upgraded to accept chat history)
     system_prompt = (
         "You are the exclusive Interactive Career Agent for Matthew 'Matt' Lorensen, "
         "a Technical Program Manager and IT Operations Leader. Your primary objective is to "
@@ -168,9 +186,10 @@ def load_ai_components():
         "2. STRUCTURAL HIERARCHY: When outlining career history, achievements, or project workflows, format the output "
         "using clean Markdown bullet points. Prioritize a strict reverse-chronological order for roles. Bold key metrics, "
         "technologies, and operational outcomes to ensure the response is easily scannable.\n"
-        "3. STRICT GROUNDING GUARDRAILS: Rely entirely on the retrieved context. Do not extrapolate, assume, or fabricate "
-        "professional details. If a user asks a question regarding a specific project, technology, or historical event that "
-        "cannot be verified by the context, gracefully respond: 'That specific detail is not covered in the current portfolio repository. "
+        "3. STRICT GROUNDING GUARDRAILS & PARTIAL MATCHES: Rely entirely on the retrieved context. Do not extrapolate, assume, or fabricate "
+        "professional details. If a user asks for a specific example, story, or metric, and that exact scenario is not explicitly detailed in the context, "
+        "you MUST output the fallback statement immediately. Do not attempt to substitute generic framework details for a specific requested example. "
+        "Fallback Statement: 'That specific detail is not covered in the current portfolio repository. "
         "Please feel free to reach out to Matt directly via the LinkedIn or Email links in the sidebar to discuss this further.'\n"
         "4. ALIGNMENT TO CORE PILLARS: Dynamically frame responses around Matt's foundational strengths: driving structural efficiency in IT operations, "
         "managing high-stakes incident response, navigating strategic pivots, and translating complex technical realities into clear C-suite communication.\n"
@@ -187,32 +206,28 @@ def load_ai_components():
         "Context:\n{context}"
     )
     
-    prompt = ChatPromptTemplate.from_messages([
+    qa_prompt = ChatPromptTemplate.from_messages([
         ("system", system_prompt),
+        MessagesPlaceholder("chat_history"),
         ("human", "{input}"),
     ])
     
-    question_answer_chain = create_stuff_documents_chain(llm, prompt)
-    return create_retrieval_chain(retriever, question_answer_chain)
+    question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
+    return create_retrieval_chain(history_aware_retriever, question_answer_chain)
 
 chain = load_ai_components()
 
 # --- UPGRADED SIDEBAR ---
 with st.sidebar:
-    # Custom HTML to pull the title up and remove the dead space
     st.markdown("<h2 style='margin-top: -10px; margin-bottom: 0px;'>Matt Lorensen</h2>", unsafe_allow_html=True)
     st.markdown("<h4 style='margin-top: 0px; color: #cbd5e1;'>Technical Program Leader</h4>", unsafe_allow_html=True)
-    
     st.markdown("---")
-    
     st.markdown(
         "Bridging the gap between high-level strategy and technical execution. "
         "I build resilient systems, optimize cloud infrastructure, and foster team development."
     )
-    
     st.markdown("---")
     
-    # Custom HTML CTAs: Using cleanly separated CSS classes for flawless rendering.
     cta_buttons_html = f"""
     <div class="social-icons-container">
         <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
@@ -227,12 +242,8 @@ with st.sidebar:
     </div>
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
-    
-    # Add vertical space to push the reset button lower
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown("---")
-    
-    # Center the button by setting use_container_width=True
     if st.button("🔄 Reset Conversation", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
@@ -267,7 +278,6 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 for idx, message in enumerate(st.session_state.messages):
-    # Set the saved history avatars (User is gold person, AI is the gear)
     avatar = "🧑" if message["role"] == "user" else "⚙️"
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
@@ -278,17 +288,27 @@ for idx, message in enumerate(st.session_state.messages):
 if user_query := st.chat_input("Ask me about Matt's career..."):
     st.session_state.messages.append({"role": "user", "content": user_query})
     
-    # Active User Avatar (Gold person)
     with st.chat_message("user", avatar="🧑"):
         st.markdown(user_query)
 
-    # Active AI Avatar (The Rocket loader)
     with st.chat_message("assistant", avatar="🚀"):
         status_container = st.empty()
         with status_container.status("🚀 Pulling calculations and context...", expanded=True) as status:
             try:
-                response = chain.invoke({"input": user_query})
+                # Format the last 4 messages (2 turns) for the AI window memory
+                chat_history = []
+                history_window = st.session_state.messages[-5:-1]
+                
+                for msg in history_window:
+                    if msg["role"] == "user":
+                        chat_history.append(HumanMessage(content=msg["content"]))
+                    else:
+                        chat_history.append(AIMessage(content=msg["content"]))
+
+                # Pass both the new query and the chat history into the chain
+                response = chain.invoke({"input": user_query, "chat_history": chat_history})
                 answer = response["answer"]
+                
             except Exception as e:
                 import traceback
                 status.update(label="🚨 System Error", state="error", expanded=False)
@@ -300,7 +320,5 @@ if user_query := st.chat_input("Ask me about Matt's career..."):
         if answer:
             status_container.empty()
             st.session_state.messages.append({"role": "assistant", "content": answer})
-            
             log_interaction(user_query, answer)
-            
             st.rerun()
