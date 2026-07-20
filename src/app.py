@@ -145,7 +145,7 @@ bg_css = f"""
         width: 100%;
         cursor: pointer;
         transition: all 0.3s ease;
-        margin-bottom: -5px; 
+        margin-bottom: 0px; /* Fixed negative margin */
         display: block;
     }}
     .resume-custom-link:hover {{
@@ -322,6 +322,9 @@ with st.sidebar:
     </a>
     """
     st.markdown(resume_html, unsafe_allow_html=True)
+
+    # Add dynamic viewport spacing to push the reset button to the bottom
+    st.markdown("<div style='height: 15vh;'></div>", unsafe_allow_html=True)
 
     # 2. Reset Conversation Button (Uses native targeting)
     if st.button("invisible_reset_text", use_container_width=True):
