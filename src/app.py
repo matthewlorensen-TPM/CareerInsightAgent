@@ -315,13 +315,24 @@ with st.sidebar:
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
-# 1. Resume Link (Opens Native PDF Viewer in a New Tab)
-    resume_html = f"""
-    <a href="/app/static/Matthew_Lorensen_Resume.pdf" target="_blank" style="text-decoration: none;">
-        <div class="resume-custom-link"></div>
-    </a>
-    """
-    st.markdown(resume_html, unsafe_allow_html=True)
+# 1. Resume Download Button (Nuclear Option: Base64 Embedded)
+    pdf_file_path = "static/Matthew_Lorensen_Resume.pdf"
+    if not os.path.exists(pdf_file_path):
+        pdf_file_path = "src/Matthew_Lorensen_Resume.pdf"
+        
+    try:
+        with open(pdf_file_path, "rb") as f:
+            pdf_bytes = f.read()
+        pdf_base64 = base64.b64encode(pdf_bytes).decode('utf-8')
+        
+        resume_html = f"""
+        <a href="data:application/octet-stream;base64,{pdf_base64}" download="Matthew_Lorensen_Resume.pdf" style="text-decoration: none;">
+            <div class="resume-custom-link"></div>
+        </a>
+        """
+        st.markdown(resume_html, unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.error("⚠️ Resume file not found. Please verify it is named 'Matthew_Lorensen_Resume.pdf'")
 
     # Add dynamic viewport spacing to push the reset button to the bottom
     st.markdown("<div style='height: 15vh;'></div>", unsafe_allow_html=True)
