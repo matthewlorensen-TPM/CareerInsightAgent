@@ -47,6 +47,7 @@ sidebar_bg_base64 = get_base64_of_bin_file('src/sidebar.jpg')
 github_icon_base64 = get_base64_of_bin_file('src/github.png')
 gmail_icon_base64 = get_base64_of_bin_file('src/gmail.png')
 linkedin_icon_base64 = get_base64_of_bin_file('src/linkedin.png') 
+reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png') # New Reset Image
 
 bg_css = f"""
 <style>
@@ -116,6 +117,27 @@ bg_css = f"""
         width: 35px; height: 35px; 
         object-fit: contain;
     }}
+    
+    /* Image-Based Reset Button Styling */
+    div[data-testid="stSidebar"] .stButton > button {{
+        background-image: url("data:image/png;base64,{reset_icon_base64}");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 105px; /* Exactly 3x the size of the 35px CTA icons */
+        width: 100%;
+        transition: all 0.3s ease;
+    }}
+    div[data-testid="stSidebar"] .stButton > button * {{
+        color: transparent !important; /* Hides the native Streamlit text */
+    }}
+    div[data-testid="stSidebar"] .stButton > button:hover {{
+        transform: translateY(-2px);
+        filter: brightness(1.2);
+    }}
 </style>
 """
 st.markdown(bg_css, unsafe_allow_html=True)
@@ -155,7 +177,7 @@ def load_ai_components():
     
     llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0.1)    
     
-    # 1. Contextualize Question Prompt (Teaches the AI to understand follow-ups)
+    # 1. Contextualize Question Prompt
     contextualize_q_system_prompt = (
         "Given a chat history and the latest user question "
         "which might reference context in the chat history, "
@@ -173,7 +195,7 @@ def load_ai_components():
         llm, retriever, contextualize_q_prompt
     )
 
-    # 2. Main Response Prompt (Upgraded to accept chat history)
+    # 2. Main Response Prompt
     system_prompt = (
         "You are the exclusive Interactive Career Agent for Matthew 'Matt' Lorensen, "
         "a Technical Program Manager and IT Operations Leader. Your primary objective is to "
@@ -219,12 +241,15 @@ chain = load_ai_components()
 
 # --- UPGRADED SIDEBAR ---
 with st.sidebar:
-    st.markdown("<h2 style='margin-top: -10px; margin-bottom: 0px;'>Matt Lorensen</h2>", unsafe_allow_html=True)
-    st.markdown("<h4 style='margin-top: 0px; color: #cbd5e1;'>Technical Program Leader</h4>", unsafe_allow_html=True)
-    st.markdown("---")
+    st.markdown("<div style='text-align: center;'><h2 style='margin-top: -10px; margin-bottom: 0px;'>Matt Lorensen</h2></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center;'><h4 style='margin-top: 0px; margin-bottom: 8px; color: #cbd5e1;'>Technical Program Leader</h4></div>", unsafe_allow_html=True)
+    
     st.markdown(
+        "<div style='text-align: center; font-size: 0.82em; font-style: italic; line-height: 1.4; color: #e2e8f0;'>"
         "Bridging the gap between high-level strategy and technical execution. "
         "I build resilient systems, optimize cloud infrastructure, and foster team development."
+        "</div>", 
+        unsafe_allow_html=True
     )
     st.markdown("---")
     
@@ -243,8 +268,9 @@ with st.sidebar:
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
-    st.markdown("---")
-    if st.button("🔄 Reset Conversation", use_container_width=True):
+    
+    # The text is hidden via CSS, but the button functionality remains intact
+    if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
 
