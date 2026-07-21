@@ -49,12 +49,14 @@ def get_base64_of_bin_file(bin_file):
 # Load all local images into memory for rendering
 main_bg_base64 = get_base64_of_bin_file('src/Screenshot 2026-07-17 070620.png')
 sidebar_bg_base64 = get_base64_of_bin_file('src/sidebar.jpg')
-github_icon_base64 = get_base64_of_bin_file('src/github.png')
-gmail_icon_base64 = get_base64_of_bin_file('src/gmail.png')
-linkedin_icon_base64 = get_base64_of_bin_file('src/linkedin.png') 
-reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png')
-resume_icon_base64 = get_base64_of_bin_file('src/myresume.png') 
-profile_pic_base64 = get_base64_of_bin_file('src/profile.png') # <--- Add this line
+profile_pic_base64 = get_base64_of_bin_file('src/profile.png') 
+
+# Load SVGs
+github_icon_base64 = get_base64_of_bin_file('src/github.svg')
+gmail_icon_base64 = get_base64_of_bin_file('src/gmail.svg')
+linkedin_icon_base64 = get_base64_of_bin_file('src/linkedin.svg') 
+reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.svg')
+resume_icon_base64 = get_base64_of_bin_file('src/myresume.svg') 
 
 bg_css = f"""
 <style>
@@ -144,7 +146,7 @@ bg_css = f"""
 
     /* Custom HTML Resume Link Styling */
     .resume-custom-link {{
-        background-image: url("data:image/png;base64,{resume_icon_base64}");
+        background-image: url("data:image/svg+xml;base64,{resume_icon_base64}");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -169,7 +171,7 @@ bg_css = f"""
     
     /* Image-Based RESET Button Styling (Direct Streamlit target) */
     [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button {{
-        background-image: url("data:image/png;base64,{reset_icon_base64}") !important;
+        background-image: url("data:image/svg+xml;base64,{reset_icon_base64}") !important;
         background-size: contain !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
@@ -316,7 +318,8 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     st.markdown("---")
-# 1. Resume Download Button (Nuclear Option: Base64 Embedded)
+    
+    # 1. Resume Download Button (Nuclear Option: Base64 Embedded)
     pdf_file_path = "static/Matthew_Lorensen_Resume.pdf"
     if not os.path.exists(pdf_file_path):
         pdf_file_path = "src/Matthew_Lorensen_Resume.pdf"
@@ -346,13 +349,13 @@ with st.sidebar:
     cta_buttons_html = f"""
     <div class="social-icons-container">
         <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
-            <img src="data:image/png;base64,{linkedin_icon_base64}">
+            <img src="data:image/svg+xml;base64,{linkedin_icon_base64}">
         </a>
         <a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" class="social-btn">
-            <img src="data:image/png;base64,{github_icon_base64}">
+            <img src="data:image/svg+xml;base64,{github_icon_base64}">
         </a>
         <a href="mailto:matthew.lorensen@gmail.com" target="_blank" class="social-btn">
-            <img src="data:image/png;base64,{gmail_icon_base64}">
+            <img src="data:image/svg+xml;base64,{gmail_icon_base64}">
         </a>
     </div>
     """

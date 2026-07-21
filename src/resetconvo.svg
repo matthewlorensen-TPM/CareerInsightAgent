@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 800 800">
+
+  <!-- Chat Bubble -->
+  <g fill="none"
+     stroke="#FFFFFF"
+     stroke-width="22"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+    <path d="
+      M220 180
+      H580
+      A60 60 0 0 1 640 240
+      V400
+      A60 60 0 0 1 580 460
+      H390
+      L290 550
+      V460
+      H220
+      A60 60 0 0 1 160 400
+      V240
+      A60 60 0 0 1 220 180
+      Z"/>
+
+    <!-- Message dots -->
+    <circle cx="300" cy="320" r="14" fill="#FFFFFF"/>
+    <circle cx="400" cy="320" r="14" fill="#FFFFFF"/>
+    <circle cx="500" cy="320" r="14" fill="#FFFFFF"/>
+
+  </g>
+
+  <!-- Text -->
+  <text x="400"
+        y="670"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="64"
+        font-weight="700">
+    Reset
+  </text>
+
+  <text x="400"
+        y="740"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="64"
+        font-weight="700">
+    Conversation
+  </text>
+
+</svg>

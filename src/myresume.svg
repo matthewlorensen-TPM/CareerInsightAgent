@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="View My Resume">
+  <g fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="300" y="220" width="420" height="360" rx="28"/>
+    <line x1="300" y1="280" x2="720" y2="280"/>
+
+    <circle cx="350" cy="250" r="8" fill="#fff"/>
+    <circle cx="390" cy="250" r="8" fill="#fff"/>
+    <circle cx="430" cy="250" r="8" fill="#fff"/>
+
+    <circle cx="405" cy="390" r="68"/>
+    <circle cx="405" cy="375" r="20"/>
+    <path d="M368 440 C380 408 430 408 442 440"/>
+
+    <line x1="515" y1="350" x2="655" y2="350"/>
+    <line x1="515" y1="395" x2="655" y2="395"/>
+    <line x1="515" y1="440" x2="655" y2="440"/>
+
+    <line x1="350" y1="495" x2="590" y2="495"/>
+    <line x1="350" y1="540" x2="540" y2="540"/>
+
+    <path d="M560 580 Q660 470 770 580 Q660 690 560 580 Z"/>
+    <circle cx="660" cy="580" r="26"/>
+  </g>
+
+  <text
+    x="512"
+    y="760"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="76"
+    font-weight="700">
+    VIEW MY
+  </text>
+
+  <text
+    x="512"
+    y="900"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="128"
+    font-weight="800">
+    RESUME
+  </text>
+</svg>
