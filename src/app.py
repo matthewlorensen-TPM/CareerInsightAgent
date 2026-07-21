@@ -54,6 +54,7 @@ gmail_icon_base64 = get_base64_of_bin_file('src/gmail.png')
 linkedin_icon_base64 = get_base64_of_bin_file('src/linkedin.png') 
 reset_icon_base64 = get_base64_of_bin_file('src/resetconvo.png')
 resume_icon_base64 = get_base64_of_bin_file('src/myresume.png') 
+profile_pic_base64 = get_base64_of_bin_file('src/profile.png') # <--- Add this line
 
 bg_css = f"""
 <style>
@@ -97,6 +98,18 @@ bg_css = f"""
     }}
     [data-testid="stSidebar"] > div:first-child {{
         background-color: rgba(15, 23, 42, 0.7);
+    }}
+
+    /* Profile Picture Custom Styling */
+    .profile-pic {{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover; 
+        border: 3px solid rgba(255, 255, 255, 0.15);
+        margin: 0 auto 15px auto; 
+        display: block;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }}
 
     /* Custom Chat Message Styling */
@@ -145,7 +158,7 @@ bg_css = f"""
         width: 100%;
         cursor: pointer;
         transition: all 0.3s ease;
-        margin-bottom: 0px; /* Fixed negative margin */
+        margin-bottom: 0px; 
         display: block;
     }}
     .resume-custom-link:hover {{
