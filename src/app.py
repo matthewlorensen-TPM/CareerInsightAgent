@@ -156,7 +156,7 @@ bg_css = f"""
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 14px;
         
-        height: 85px;
+        height: 90px;
         width: 70%;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -182,7 +182,7 @@ bg_css = f"""
         border-radius: 14px !important;
         
         box-shadow: none !important;
-        height: 85px !important; 
+        height: 90px !important; 
         width: 70% !important;
         transition: all 0.3s ease !important;
         padding: 0 !important;
