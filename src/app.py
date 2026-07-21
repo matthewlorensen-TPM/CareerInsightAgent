@@ -156,7 +156,7 @@ bg_css = f"""
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 12px;
         
-        height: 90px;
+        height: 100px;
         width: 40%;
         min-width: 120px;
         margin: 0 auto 15px auto; /* Centers horizontally and adds gap below */
@@ -190,7 +190,7 @@ bg_css = f"""
         border-radius: 12px !important;
         
         box-shadow: none !important;
-        height: 90px !important; 
+        height: 100px !important; 
         width: 40% !important;
         min-width: 120px !important;
         margin: 0 auto !important; /* Centers horizontally */
