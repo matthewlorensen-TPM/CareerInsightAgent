@@ -342,6 +342,7 @@ with st.sidebar:
     if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
         st.rerun()    
+    st.markdown("---")
     cta_buttons_html = f"""
     <div class="social-icons-container">
         <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
@@ -357,7 +358,7 @@ with st.sidebar:
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
-    st.markdown("---")
+
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
