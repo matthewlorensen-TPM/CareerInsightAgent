@@ -154,13 +154,14 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03); 
         border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 2px;
+        border-radius: 12px;
         
         height: 90px;
         width: 40%;
+        min-width: 120px;
+        margin: 0 auto 15px auto; /* Centers horizontally and adds gap below */
         cursor: pointer;
         transition: all 0.3s ease;
-        margin-bottom: 0px; 
         display: block;
     }}
     .resume-custom-link:hover {{
@@ -169,6 +170,13 @@ bg_css = f"""
         transform: translateY(-2px);
     }}
     
+    /* Center Streamlit's native button container */
+    [data-testid="stSidebarUserContent"] div[data-testid="stButton"] {{
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }}
+
     /* Image-Based RESET Button Styling (Direct Streamlit target) */
     [data-testid="stSidebarUserContent"] div[data-testid="stButton"] button {{
         background-image: url("data:image/svg+xml;base64,{reset_icon_base64}") !important;
@@ -179,11 +187,13 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 2px !important;
+        border-radius: 12px !important;
         
         box-shadow: none !important;
         height: 90px !important; 
         width: 40% !important;
+        min-width: 120px !important;
+        margin: 0 auto !important; /* Centers horizontally */
         transition: all 0.3s ease !important;
         padding: 0 !important;
     }}
@@ -342,7 +352,9 @@ with st.sidebar:
     if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
         st.rerun()    
+        
     st.markdown("---")
+    
     cta_buttons_html = f"""
     <div class="social-icons-container">
         <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
@@ -358,7 +370,6 @@ with st.sidebar:
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
-
 
 # --- Main Interface ---
 st.title("Matthew Lorensen")
