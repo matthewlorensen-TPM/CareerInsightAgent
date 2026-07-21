@@ -104,12 +104,12 @@ bg_css = f"""
 
     /* Profile Picture Custom Styling */
     .profile-pic {{
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         border-radius: 50%;
         object-fit: cover; 
         border: 3px solid rgba(255, 255, 255, 0.15);
-        margin: 0 auto 15px auto; 
+        margin: 0 auto 10px auto; 
         display: block;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }}
@@ -123,15 +123,15 @@ bg_css = f"""
     
     /* Custom Sidebar Social Buttons */
     .social-icons-container {{
-        display: flex; flex-direction: row; justify-content: center; gap: 15px; margin-bottom: 20px;
+        display: flex; flex-direction: row; justify-content: center; gap: 15px; margin-bottom: 15px;
     }}
     .social-btn {{
         display: flex; align-items: center; justify-content: center;
         background-color: rgba(255, 255, 255, 0.03); 
         border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 14px;
+        border-radius: 12px;
         text-decoration: none;
-        width: 65px; height: 65px; 
+        width: 55px; height: 55px; 
         transition: all 0.3s ease;
     }}
     .social-btn:hover {{
@@ -140,7 +140,7 @@ bg_css = f"""
         transform: translateY(-2px);
     }}
     .social-btn img {{
-        width: 35px; height: 35px; 
+        width: 28px; height: 28px; 
         object-fit: contain;
     }}
 
@@ -156,7 +156,7 @@ bg_css = f"""
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 14px;
         
-        height: 105px;
+        height: 85px;
         width: 100%;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -182,7 +182,7 @@ bg_css = f"""
         border-radius: 14px !important;
         
         box-shadow: none !important;
-        height: 105px !important; 
+        height: 85px !important; 
         width: 100% !important;
         transition: all 0.3s ease !important;
         padding: 0 !important;
@@ -337,9 +337,6 @@ with st.sidebar:
         st.markdown(resume_html, unsafe_allow_html=True)
     except FileNotFoundError:
         st.error("⚠️ Resume file not found. Please verify it is named 'Matthew_Lorensen_Resume.pdf'")
-
-    # Add dynamic viewport spacing to push the reset button to the bottom
-    st.markdown("<div style='height: 1vh;'></div>", unsafe_allow_html=True)
 
     # 2. Reset Conversation Button (Uses native targeting)
     if st.button("invisible_reset_text", use_container_width=True):
