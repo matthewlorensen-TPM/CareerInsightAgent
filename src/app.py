@@ -154,10 +154,10 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03); 
         border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 10px;
+        border-radius: 5px;
         
         height: 100px;
-        width: 50%;
+        width: 40%;
         cursor: pointer;
         transition: all 0.3s ease;
         margin-bottom: 0px; 
@@ -179,11 +179,11 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 10px !important;
+        border-radius: 5px !important;
         
         box-shadow: none !important;
         height: 100px !important; 
-        width: 50% !important;
+        width: 40% !important;
         transition: all 0.3s ease !important;
         padding: 0 !important;
     }}
