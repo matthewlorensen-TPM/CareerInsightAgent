@@ -131,7 +131,7 @@ bg_css = f"""
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 12px;
         text-decoration: none;
-        width: 55px; height: 55px; 
+        width: 50px; height: 50px; 
         transition: all 0.3s ease;
     }}
     .social-btn:hover {{
