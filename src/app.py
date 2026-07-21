@@ -343,10 +343,7 @@ with st.sidebar:
     # 2. Reset Conversation Button (Uses native targeting)
     if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
-        st.rerun()
-    
-    st.markdown("---")         
-    
+        st.rerun()    
     cta_buttons_html = f"""
     <div class="social-icons-container">
         <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
