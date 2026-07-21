@@ -337,12 +337,16 @@ with st.sidebar:
         st.markdown(resume_html, unsafe_allow_html=True)
     except FileNotFoundError:
         st.error("⚠️ Resume file not found. Please verify it is named 'Matthew_Lorensen_Resume.pdf'")
-
+    
+    st.markdown("---")
+    
     # 2. Reset Conversation Button (Uses native targeting)
     if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
-            
+    
+    st.markdown("---")         
+    
     cta_buttons_html = f"""
     <div class="social-icons-container">
         <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
