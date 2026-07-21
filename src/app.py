@@ -316,22 +316,6 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     st.markdown("---")
-    
-    cta_buttons_html = f"""
-    <div class="social-icons-container">
-        <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
-            <img src="data:image/png;base64,{linkedin_icon_base64}">
-        </a>
-        <a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" class="social-btn">
-            <img src="data:image/png;base64,{github_icon_base64}">
-        </a>
-        <a href="mailto:matthew.lorensen@gmail.com" target="_blank" class="social-btn">
-            <img src="data:image/png;base64,{gmail_icon_base64}">
-        </a>
-    </div>
-    """
-    st.markdown(cta_buttons_html, unsafe_allow_html=True)
-    
 # 1. Resume Download Button (Nuclear Option: Base64 Embedded)
     pdf_file_path = "static/Matthew_Lorensen_Resume.pdf"
     if not os.path.exists(pdf_file_path):
@@ -358,7 +342,22 @@ with st.sidebar:
     if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
-
+            
+    cta_buttons_html = f"""
+    <div class="social-icons-container">
+        <a href="https://www.linkedin.com/in/matthewlorensen/" target="_blank" class="social-btn">
+            <img src="data:image/png;base64,{linkedin_icon_base64}">
+        </a>
+        <a href="https://github.com/matthewlorensen-TPM/CareerInsightAgent" target="_blank" class="social-btn">
+            <img src="data:image/png;base64,{github_icon_base64}">
+        </a>
+        <a href="mailto:matthew.lorensen@gmail.com" target="_blank" class="social-btn">
+            <img src="data:image/png;base64,{gmail_icon_base64}">
+        </a>
+    </div>
+    """
+    st.markdown(cta_buttons_html, unsafe_allow_html=True)
+    
 # --- Main Interface ---
 st.title("Matthew Lorensen")
 st.subheader("Interactive Career Insight Agent")
