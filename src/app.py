@@ -154,7 +154,7 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03); 
         border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 5px;
+        border-radius: 2px;
         
         height: 100px;
         width: 40%;
@@ -179,7 +179,7 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 5px !important;
+        border-radius: 2px !important;
         
         box-shadow: none !important;
         height: 100px !important; 
