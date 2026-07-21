@@ -352,7 +352,7 @@ with st.sidebar:
         st.error("⚠️ Resume file not found. Please verify it is named 'Matthew_Lorensen_Resume.pdf'")
 
     # Add dynamic viewport spacing to push the reset button to the bottom
-    st.markdown("<div style='height: 10vh;'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='height: 8vh;'></div>", unsafe_allow_html=True)
 
     # 2. Reset Conversation Button (Uses native targeting)
     if st.button("invisible_reset_text", use_container_width=True):
