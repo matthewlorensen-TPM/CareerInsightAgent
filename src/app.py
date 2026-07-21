@@ -157,7 +157,7 @@ bg_css = f"""
         border-radius: 5px;
         
         height: 95px;
-        width: 40%;
+        width: 30%;
         min-width: 120px;
         margin: 0 auto 15px auto; /* Centers horizontally and adds gap below */
         cursor: pointer;
@@ -191,7 +191,7 @@ bg_css = f"""
         
         box-shadow: none !important;
         height: 95px !important; 
-        width: 40% !important;
+        width: 30% !important;
         min-width: 120px !important;
         margin: 0 auto !important; /* Centers horizontally */
         transition: all 0.3s ease !important;
