@@ -154,9 +154,9 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03); 
         border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 14px;
+        border-radius: 10px;
         
-        height: 110px;
+        height: 100px;
         width: 50%;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -179,10 +179,10 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 14px !important;
+        border-radius: 10px !important;
         
         box-shadow: none !important;
-        height: 110px !important; 
+        height: 100px !important; 
         width: 50% !important;
         transition: all 0.3s ease !important;
         padding: 0 !important;
@@ -337,9 +337,7 @@ with st.sidebar:
         st.markdown(resume_html, unsafe_allow_html=True)
     except FileNotFoundError:
         st.error("⚠️ Resume file not found. Please verify it is named 'Matthew_Lorensen_Resume.pdf'")
-    
-    st.markdown("---")
-    
+   
     # 2. Reset Conversation Button (Uses native targeting)
     if st.button("invisible_reset_text", use_container_width=True):
         st.session_state.messages = []
@@ -359,6 +357,8 @@ with st.sidebar:
     """
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
+    st.markdown("---")
+
 # --- Main Interface ---
 st.title("Matthew Lorensen")
 st.subheader("Interactive Career Insight Agent")
