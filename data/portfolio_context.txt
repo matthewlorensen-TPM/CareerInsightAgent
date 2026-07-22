@@ -93,6 +93,10 @@ Matt’s career is defined by high-impact operational transformations, zero-to-o
 
 Matt Lorensen has over 15 years of experience in IT operations, technical program management, and product development.
 
+One notable professional project Matt has engineered is a live **Jira-to-PowerBI Data Telemetry Bridge**.
+
+Built from scratch to support a $20M+ enterprise SaaS ecosystem, this project served as the organization's analytical single source of truth. By configuring custom workflow automation states and live data connectors, the system linked daily technical ticket queues directly to macro account health metrics. The implementation successfully eliminated **60 hours of manual data tracking overhead monthly** and provided leadership with automated, real-time risk forecasting to prevent contractual SLA breaches.
+
 ### 🏢 Hansen Technologies
 *   **Tenure Baseline:** December 2021 – June 2026
 *   **Operational Footprint:** Denver, CO (Remote Environment)
