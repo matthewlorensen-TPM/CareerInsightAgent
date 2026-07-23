@@ -329,8 +329,7 @@ with st.sidebar:
     
     st.markdown(
         "<div style='text-align: center; font-size: 0.82em; font-style: italic; line-height: 1.4; color: #e2e8f0;'>"
-        "Bridging the gap between high-level strategy and technical execution. "
-        "I build resilient systems, optimize cloud infrastructure, and foster team development."
+        "Translating high-level strategy into resilient systems and technical execution."
         "</div>", 
         unsafe_allow_html=True
     )
