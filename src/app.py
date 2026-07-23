@@ -140,7 +140,7 @@ bg_css = f"""
         transform: translateY(-2px);
     }}
     .social-btn img {{
-        width: 28px; height: 28px; 
+        width: 25px; height: 25px; 
         object-fit: contain;
     }}
 
@@ -154,10 +154,10 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03); 
         border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: 5px;
+        border-radius: 12px;
         
-        height: 95px;
-        width: 30%;
+        height: 90px;
+        width: 40%;
         min-width: 120px;
         margin: 0 auto 15px auto; /* Centers horizontally and adds gap below */
         cursor: pointer;
@@ -187,11 +187,11 @@ bg_css = f"""
         /* Matched to social buttons */
         background-color: rgba(255, 255, 255, 0.03) !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 5px !important;
+        border-radius: 12px !important;
         
         box-shadow: none !important;
-        height: 95px !important; 
-        width: 30% !important;
+        height: 90px !important; 
+        width: 40% !important;
         min-width: 120px !important;
         margin: 0 auto !important; /* Centers horizontally */
         transition: all 0.3s ease !important;
@@ -371,26 +371,47 @@ with st.sidebar:
     st.markdown(cta_buttons_html, unsafe_allow_html=True)
     
 
-# --- Main Interface ---
-st.title("Matthew Lorensen")
-st.subheader("Interactive Career Insight Agent")
+# --- MAIN INTERFACE UX UPGRADE ---
 
+# Custom Hero Header
 st.markdown(
     """
-    <div style="background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); 
-                border-radius: 12px; padding: 15px 20px; margin-bottom: 20px; color: #ffffff; 
-                backdrop-filter: blur(8px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
-        <div style="margin-bottom: 10px;"><b>About This Project</b></div>
-        <div style="margin-bottom: 10px; font-size: 0.95em; line-height: 1.5;">
-            As a Technical Program Manager and IT Operations Leader, I built this AI agent to move beyond a static resume. 
-            This project demonstrates hands-on applied AI, offering a dynamic way to explore my professional background, 
-            incident response methodologies, and cross-functional leadership experience.
-        </div>
-        <div style="margin-bottom: 10px; font-size: 0.95em; line-height: 1.5;">
-            <b>Note on Accuracy:</b> The model's temperature is strictly locked at 0.1. This guarantees that every response is intentional, highly deterministic, and completely grounded in my actual professional experience rather than AI hallucination.
-        </div>
-        <div style="font-size: 0.95em;">
-            <b>Built with:</b> Python, Streamlit, LangChain, Chroma DB, and the Google Gemini API.
+    <div style="text-align: center; margin-top: 10px; margin-bottom: 35px;">
+        <h1 style="font-size: 3.2rem; font-weight: 700; margin-bottom: 0px; color: #f8fafc; letter-spacing: -0.5px;">Matthew Lorensen</h1>
+        <h3 style="font-weight: 400; color: #94a3b8; margin-top: 5px; font-size: 1.4rem;">Interactive Career Insight Agent</h3>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
+
+# Bento-Box Style Portfolio Card
+st.markdown(
+    """
+    <div style="background-color: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.15); 
+                border-radius: 16px; padding: 25px 30px; margin-bottom: 35px; color: #e2e8f0; 
+                backdrop-filter: blur(12px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);">
+        <h4 style="margin-top: 0; color: #f8fafc; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+            👋 Welcome to my interactive portfolio
+        </h4>
+        <div style="display: flex; flex-direction: row; gap: 30px; flex-wrap: wrap;">
+            
+            <div style="flex: 1.5; min-width: 300px; line-height: 1.6; font-size: 1.05em; color: #cbd5e1;">
+                As a Technical Program Manager and IT Operations Leader, I built this AI agent to move beyond a static resume. 
+                This project demonstrates hands-on applied AI, offering a dynamic way to explore my professional background, 
+                incident response methodologies, and cross-functional leadership experience.
+            </div>
+            
+            <div style="flex: 1; min-width: 250px; font-size: 0.95em; padding-left: 25px; border-left: 1px solid rgba(255,255,255,0.15);">
+                <div style="margin-bottom: 15px;">
+                    <strong style="color: #f8fafc;">🎯 Zero Hallucination Guarantee:</strong><br> 
+                    <span style="color: #94a3b8;">The model's temperature is strictly locked at 0.1. Every response is intentional, deterministic, and grounded entirely in my actual professional experience.</span>
+                </div>
+                <div>
+                    <strong style="color: #f8fafc;">⚡ The Tech Stack:</strong><br> 
+                    <span style="color: #94a3b8;">Python, Streamlit, LangChain, Chroma DB, Google Gemini API.</span>
+                </div>
+            </div>
+            
         </div>
     </div>
     """,
