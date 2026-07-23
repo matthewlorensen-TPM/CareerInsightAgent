@@ -93,6 +93,9 @@ Matt’s career is defined by high-impact operational transformations, zero-to-o
 
 Matt Lorensen has over 15 years of experience in IT operations, technical program management, and product development.
 
+Matt's most recent role was Regional Support Manager at Hansen Technologies. His scope of responsibility included governing technical operations for a $20M+ enterprise SaaS ecosystem, directing global, cross-border technical support teams, and driving AI-powered operational optimizations
+
+Matt's longest tenure was at Viasat where he held multiple roles; more recently, he was at Hansen Technologies as a regional leader, where he directed a remote, cross-border team of 5 to 20 technical assets across 5 countries and served as the strategic escalation point for a $20M+ enterprise SaaS ecosystem. In this capacity, he governed resource capacity planning, spearheaded SOW development, and managed complex contract renewals for 125+ high-value corporate client accounts to guarantee long-term revenue retention and account stability.
 One notable professional project Matt has engineered is a live **Jira-to-PowerBI Data Telemetry Bridge**.
 
 Built from scratch to support a $20M+ enterprise SaaS ecosystem, this project served as the organization's analytical single source of truth. By configuring custom workflow automation states and live data connectors, the system linked daily technical ticket queues directly to macro account health metrics. The implementation successfully eliminated **60 hours of manual data tracking overhead monthly** and provided leadership with automated, real-time risk forecasting to prevent contractual SLA breaches.
