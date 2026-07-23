@@ -313,9 +313,16 @@ chain = load_ai_components()
 
 # --- UPGRADED SIDEBAR ---
 with st.sidebar:
-    # Render the circular profile picture
+    # Render the circular profile picture - Wrapped in a div to prevent Streamlit Markdown errors
     if profile_pic_base64:
-        st.markdown(f'<img src="data:image/png;base64,{profile_pic_base64}" class="profile-pic">', unsafe_allow_html=True)
+        st.markdown(
+            f'''
+            <div style="text-align: center; width: 100%;">
+                <img src="data:image/png;base64,{profile_pic_base64}" class="profile-pic">
+            </div>
+            ''', 
+            unsafe_allow_html=True
+        )
         
     st.markdown("<div style='text-align: center;'><h2 style='margin-top: -10px; margin-bottom: 0px; font-size: 22pt;'>Matt Lorensen</h2></div>", unsafe_allow_html=True)
     st.markdown("<div style='text-align: center;'><h4 style='margin-top: 0px; margin-bottom: 8px; color: #cbd5e1;'>Technical Program Leader</h4></div>", unsafe_allow_html=True)
