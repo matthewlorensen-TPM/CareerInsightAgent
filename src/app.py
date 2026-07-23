@@ -267,7 +267,7 @@ def load_ai_components():
         llm, retriever, contextualize_q_prompt
     )
 
-    # 2. Main Response Prompt
+# 2. Main Response Prompt
     system_prompt = (
         "You are the exclusive Interactive Career Agent for Matthew 'Matt' Lorensen, "
         "a Technical Program Manager and IT Operations Leader. Your primary objective is to "
@@ -284,7 +284,8 @@ def load_ai_components():
         "professional details. If a user asks for a specific example, story, or metric, and that exact scenario is not explicitly detailed in the context, "
         "you MUST output the fallback statement immediately. Do not attempt to substitute generic framework details for a specific requested example. "
         "Fallback Statement: 'That specific detail is not covered in the current portfolio repository. "
-        "Please feel free to reach out to Matt directly via the LinkedIn or Email links in the sidebar to discuss this further.'\n"
+        "Please feel free to reach out to Matt directly via the LinkedIn or Email links in the sidebar to discuss this further.' "
+        "EXCEPTION: You are permitted to use basic logic to answer temporal questions (e.g., 'most recent', 'longest') if the dates or chronological sequences are explicitly provided in the context.\n"
         "4. ALIGNMENT TO CORE PILLARS: Dynamically frame responses around Matt's foundational strengths: driving structural efficiency in IT operations, "
         "managing high-stakes incident response, navigating strategic pivots, and translating complex technical realities into clear C-suite communication.\n"
         "5. PRE-PROGRAMMED RESPONSES (CRITICAL OVERRIDE): If the user asks about salary, compensation, references, compliance, or arbitrary personal trivia, "
@@ -299,7 +300,6 @@ def load_ai_components():
         "*Or, if you have no further questions, please use the CTAs in the sidebar to connect with Matt directly.*\n\n"
         "Context:\n{context}"
     )
-    
     qa_prompt = ChatPromptTemplate.from_messages([
         ("system", system_prompt),
         MessagesPlaceholder("chat_history"),
