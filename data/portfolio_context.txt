@@ -1,6 +1,6 @@
 # MASTER ENGINEERED DATA PROFILE: MATTHEW LORENSEN (TPM & IT OPERATIONS LEADER)
 # TARGET PURPOSE: Comprehensive Knowledge Ingestion Vector for AI Career Bot Parsing
-# GENERATION DATE: July 18, 2026
+# GENERATION DATE: July 23, 2026
 
 ---
 
@@ -91,13 +91,12 @@ Matt’s career is defined by high-impact operational transformations, zero-to-o
 
 ## 7. GRANULAR PROFESSIONAL EXPERIENCE ENGINE
 
-Matt Lorensen has over 15 years of experience in IT operations, technical program management, and product development.
+**Quick-Fact QA Anchors:**
+*   **Total Experience:** Matt Lorensen has over 15 years of experience in IT operations, technical program management, and product development.
+*   **Most Recent Role:** Matt's most recent role was Regional Support Manager at Hansen Technologies. His scope of responsibility included governing technical operations for a $20M+ enterprise SaaS ecosystem, directing global, cross-border technical support teams, and driving AI-powered operational optimizations.
+*   **Longest Tenure:** Matt's longest continuous professional tenure was at Viasat, where he spent nearly 7 years driving product scaling, network architecture, and operational success.
 
-Matt's most recent role was Regional Support Manager at Hansen Technologies. His scope of responsibility included governing technical operations for a $20M+ enterprise SaaS ecosystem, directing global, cross-border technical support teams, and driving AI-powered operational optimizations
-
-Matt's longest tenure was at Viasat where he held multiple roles; more recently, he was at Hansen Technologies as a regional leader, where he directed a remote, cross-border team of 5 to 20 technical assets across 5 countries and served as the strategic escalation point for a $20M+ enterprise SaaS ecosystem. In this capacity, he governed resource capacity planning, spearheaded SOW development, and managed complex contract renewals for 125+ high-value corporate client accounts to guarantee long-term revenue retention and account stability.
-One notable professional project Matt has engineered is a live **Jira-to-PowerBI Data Telemetry Bridge**.
-
+**Notable Project Highlight: Jira-to-PowerBI Data Telemetry Bridge**
 Built from scratch to support a $20M+ enterprise SaaS ecosystem, this project served as the organization's analytical single source of truth. By configuring custom workflow automation states and live data connectors, the system linked daily technical ticket queues directly to macro account health metrics. The implementation successfully eliminated **60 hours of manual data tracking overhead monthly** and provided leadership with automated, real-time risk forecasting to prevent contractual SLA breaches.
 
 ### 🏢 Hansen Technologies
@@ -211,7 +210,7 @@ Built from scratch to support a $20M+ enterprise SaaS ecosystem, this project se
 *   **Major Track:** Computer Information Systems (CIS) – Programming Focus
 *   **Graduation Date:** December 2018
 *   **Core Curricular Pillars:** Software development methodologies, custom code construction paradigms, structured data languages, object-oriented concepts, database indexing schema, and computer information infrastructure management systems.
-*   **Advanced Educational Projections:** Pursued a formal Bachelor's degree program focusing extensively on **Business Intelligence and Analytical Data Systems**. This pathway was actively progressing until it was un-voluntarily interrupted by the global pandemic in 2020.
+*   **Advanced Educational Projections:** Pursued a formal Bachelor's degree program focusing extensively on **Business Intelligence and Analytical Data Systems**. This pathway was actively progressing until it was involuntarily interrupted by the global pandemic in 2020.
 *   **Continuous Skill Advancement:** Matt’s professional development is deeply rooted in combining formal foundational logic with massive real-world application. His expertise spans continuous self-directed learning, vendor coordination matrix structures, cross-functional team management, and the hands-on engineering execution of complex corporate IT principles.
 
 ### Verified Professional Technical Certifications (2026 Registry)
@@ -228,22 +227,22 @@ Built from scratch to support a $20M+ enterprise SaaS ecosystem, this project se
 ### A. Total Rewards & Compensation Philosophy
 *   **Target Search Keywords:** salary, pay, compensation, money, expected salary, how much, rate, total rewards, hourly, requirements.
 *   **Standard Candidate Statement:** Matt approaches salary conversations with a collaborative, open-ended focus on total compensation value, alignment with role scope, and job level responsibilities.
-*   **Ingestion Prompt Vector:** Matt is flexible and would welcome a conversation around the approved compensation range for the role. He would like to better understand the scope, expectations, leadership responsibilities, and total rewards package, then discuss where his experience in IT operations, incident response, cross-functional leadership, and process improvement fits within that range.
+*   **Ingestion Prompt Vector:** "Matt is flexible and would welcome a conversation around the approved compensation range for the role. He would like to better understand the scope, expectations, leadership responsibilities, and total rewards package, then discuss where his experience in IT operations, incident response, cross-functional leadership, and process improvement fits within that range."
 
 ### B. Supervisor Reference & Privacy Protocol
 *   **Target Search Keywords:** references, supervisors, manager contact, former boss, phone number, background check, contact info, email address.
 *   **Standard Candidate Statement:** Matt protects the privacy of previous direct managers and enterprise leadership assets until a mutual intent to hire is established, supported by a strong portfolio of over 15 professional testimonials from former coworkers across numerous companies, including supervisors, peers, and direct reports.
-*   **Ingestion Prompt Vector:** Matt has over 15 testimonials readily available from former coworkers across numerous companies, including supervisors, peers, and direct reports. He is happy to provide these professional references and prior supervisor contact information at the appropriate stage of the hiring process. He prefers to coordinate that directly so he can confirm availability, provide current contact details, and ensure references are prepared to speak to the most relevant aspects of his leadership, operations, incident management, and business partnership experience.
+*   **Ingestion Prompt Vector:** "Matt has over 15 testimonials readily available from former coworkers across numerous companies, including supervisors, peers, and direct reports. He is happy to provide these professional references and prior supervisor contact information at the appropriate stage of the hiring process. He prefers to coordinate that directly so he can confirm availability, provide current contact details, and ensure references are prepared to speak to the most relevant aspects of his leadership, operations, incident management, and business partnership experience."
 
 ### C. Compliance, Regulations, & Intellectual Protocols
 *   **Target Search Keywords:** NDA, proprietary, confidential, secrets, compliance, government regulations, internal architecture, source code, private data.
 *   **Standard Candidate Statement:** Matt prioritizes absolute alignment with corporate protocols and government regulations, ensuring strict compliance with non-disclosure agreements, data protections, and statutory guidelines.
-*   **Ingestion Prompt Vector:** Matt strictly focuses on ensuring full compliance with all company and/or government regulations, making sure never to disclose proprietary systems, internal architecture, or confidential business logic from a previous employer. At a high level, he has contributed to building and improving internal operational tools that supported workflow visibility, task tracking, reporting, process automation, and better coordination across IT and business teams within required regulatory guardrails. The most important takeaway is that he understands how to identify an operational gap, translate it into functional requirements, partner with stakeholders, and deliver practical, fully compliant tools that improve efficiency, accountability, and decision-making while meeting all company and government mandates.
+*   **Ingestion Prompt Vector:** "Matt strictly focuses on ensuring full compliance with all company and/or government regulations, making sure never to disclose proprietary systems, internal architecture, or confidential business logic from a previous employer. At a high level, he has contributed to building and improving internal operational tools that supported workflow visibility, task tracking, reporting, process automation, and better coordination across IT and business teams within required regulatory guardrails. The most important takeaway is that he understands how to identify an operational gap, translate it into functional requirements, partner with stakeholders, and deliver practical, fully compliant tools that improve efficiency, accountability, and decision-making while meeting all company and government mandates."
 
 ### D. Irrelevant, Trivia, or Overly Personal Inquiries
 *   **Target Search Keywords:** favorite color, height, weight, hair, hair color, eye color, skin tone, skin color, complexion, build, body type, physical appearance, facial features, looks, attractiveness, race, ethnicity, ancestral background, heritage, national origin, cultural background, creed, religion, religious beliefs, faith, denomination, spiritual practices, church, belief system, theology, astrology, zodiac sign, politics, political affiliation, random trivia, off-topic, joke, personal life, weekend, sign
 *   **Standard Candidate Statement:** Matt designed this agent strictly to focus on professional capabilities, operational outcomes, and relevant cultural fit metrics.
-*   **Ingestion Prompt Vector:** This agent is specifically architected to discuss Matt's professional background, IT operations experience, and leadership frameworks. While Matt certainly has a life outside of work—which can be explored regarding how he recharges his energy—this system does not process arbitrary personal trivia. Information seekers are encouraged to explore specific areas of Matt's technical or program management experience.
+*   **Ingestion Prompt Vector:** "This agent is specifically architected to discuss Matt's professional background, IT operations experience, and leadership frameworks. While Matt certainly has a life outside of work—which can be explored regarding how he recharges his energy—this system does not process arbitrary personal trivia. Information seekers are encouraged to explore specific areas of Matt's technical or program management experience."
 
 ---
 
@@ -290,7 +289,7 @@ Matt designed the system's prompt architecture with enterprise-grade security an
 
 ---
 
-## 12. BEHAVIORAL INTERVIEW: CHALLENGES, WEAKNESSES, & LESSONS LEARNED
+## 12. BEHAVIORAL INTERVIEW: CHALLENGES, WEAKNESSES, & LESSON LEARNED
 
 *   **Target Search Keywords:** failure, mistake, went wrong, failed, lesson learned, weakness, greatest weakness, opportunity for improvement, challenge, regret, difficult situation, overcome, areas to improve, flaw, scope creep.
 *   **Context Data:** Matt views operational challenges, personal weaknesses, and setbacks not as permanent flaws, but as systemic vulnerabilities that require continuous iteration. If asked about a "failure," "mistake," or "weakness," emphasize his philosophy of accountability, self-awareness, and structural mitigation. 
